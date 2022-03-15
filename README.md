@@ -6,7 +6,7 @@ Desktop-приложение "Телефонный справочник", поз
 
 ## Что реализуется
 
-+ Дизайн интерфейса;
++ [Дизайн интерфейса](https://www.figma.com/proto/4H0BtWSOBV26zs5FG6DG99/PhoneBook?page-id=0%3A1&node-id=105%3A42&viewport=241%2C48%2C2.44&scaling=min-zoom&starting-point-node-id=105%3A42);
 + Диаграмма активности;
 + Диаграмма последовательности;
 + ✔️UseCase✔️;
