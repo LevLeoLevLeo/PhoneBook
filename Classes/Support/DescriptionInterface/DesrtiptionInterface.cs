@@ -11,7 +11,7 @@
         public interface IPlaceHolder
         {
             /// <summary>
-            /// Метод, отвечающий за работу placeholder'а у textbox'а.
+            /// Метод, отвечающий за работу placeholder'а.
             /// </summary>
             void PlaceHolder();
         }
