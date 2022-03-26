@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
-
-namespace WPFTextBoxHelp.Classes.Support
+﻿namespace WPFTextBoxHelp.Classes.Support
 {
     /// <summary>
     /// Описывает интерфейсы для библиотеке WPFTextBoxHelp

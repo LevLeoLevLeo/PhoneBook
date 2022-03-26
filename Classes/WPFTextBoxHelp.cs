@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 using WPFTextBoxHelp.Classes.Support.Placeholder;
 
 namespace WPFTextBoxHelp.Classes
@@ -14,7 +9,7 @@ namespace WPFTextBoxHelp.Classes
     public class WPFTextBoxHelp
     {
         /// <summary>
-        /// Отвечает за работу placeholder'а при получении фокуса клавиатуры на TextBox.
+        /// Действиет placeholder'а при получении фокуса клавиатуры на TextBox'е.
         /// </summary>
         /// <param name="textBox"></param>
         /// <param name="placeholdertext"></param>
@@ -22,6 +17,16 @@ namespace WPFTextBoxHelp.Classes
         {
             TxbPlaceholderGotFocus txbPlaceholderGotFocus = new TxbPlaceholderGotFocus(ref textBox, ref placeholdertext);
             txbPlaceholderGotFocus.PlaceHolder();
+        }
+        /// <summary>
+        /// Действиеи placeholder'а при потери фокуса клавиатуры на TextBox'е.
+        /// </summary>
+        /// <param name="textBox"></param>
+        /// <param name="placeholdertext"></param>
+        public static void TextBoxPlaceholderLostFocus(TextBox textBox, string placeholdertext)
+        {
+            TxbPlaceholderLostFocus txbPlaceholderLostFocus = new TxbPlaceholderLostFocus(ref textBox, ref placeholdertext);
+            txbPlaceholderLostFocus.PlaceHolder();
         }
     }
 }

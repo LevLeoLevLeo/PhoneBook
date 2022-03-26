@@ -1,0 +1,8 @@
+C:\Users\LevLe\Desktop\Курсач\WPFTextBoxHelp\bin\Debug\WPFTextBoxHelp.dll
+C:\Users\LevLe\Desktop\Курсач\WPFTextBoxHelp\bin\Debug\WPFTextBoxHelp.pdb
+C:\Users\LevLe\Desktop\Курсач\WPFTextBoxHelp\obj\Debug\WPFTextBoxHelp.csproj.AssemblyReference.cache
+C:\Users\LevLe\Desktop\Курсач\WPFTextBoxHelp\obj\Debug\WPFTextBoxHelp.Properties.Resources.resources
+C:\Users\LevLe\Desktop\Курсач\WPFTextBoxHelp\obj\Debug\WPFTextBoxHelp.csproj.GenerateResource.cache
+C:\Users\LevLe\Desktop\Курсач\WPFTextBoxHelp\obj\Debug\WPFTextBoxHelp.csproj.CoreCompileInputs.cache
+C:\Users\LevLe\Desktop\Курсач\WPFTextBoxHelp\obj\Debug\WPFTextBoxHelp.dll
+C:\Users\LevLe\Desktop\Курсач\WPFTextBoxHelp\obj\Debug\WPFTextBoxHelp.pdb
