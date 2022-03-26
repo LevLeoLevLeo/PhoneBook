@@ -42,6 +42,16 @@ namespace WPFTextBoxHelp.Classes
             PsbPlaceholderGotFocus psbPlaceholderGotFocus = new PsbPlaceholderGotFocus(ref textBox, ref passwordBox, ref placeholdertext);
             psbPlaceholderGotFocus.PlaceHolder();
         }
+        /// <summary>
+        /// Действие placeholder'а у поля "пароль" при получении фокуса клавиатуры на password/textbox
+        /// </summary>
+        /// <param name="textBox"></param>
+        /// <param name="passwordBox"></param>
+        public static void PasswordBoxPlaceholderLostFocus(TextBox textBox, PasswordBox passwordBox)
+        {
+            PsbPlaceholderLostFocus psbPlaceholderLostFocus = new PsbPlaceholderLostFocus(ref textBox, ref passwordBox);
+            psbPlaceholderLostFocus.PlaceHolder();
+        }
         #endregion
     }
 }
