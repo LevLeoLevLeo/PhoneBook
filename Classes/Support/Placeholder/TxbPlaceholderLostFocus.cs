@@ -15,16 +15,18 @@ namespace WPFTextBoxHelp.Classes.Support.Placeholder
     public class TxbPlaceholderLostFocus : IPlaceHolder
     {
         private TextBox TextBox { get; set; }
+
         private string Placeholdertext { get; set; }
+
         public TxbPlaceholderLostFocus(ref TextBox textBox, ref string placeholderText)
         {
             TextBox = textBox;
             Placeholdertext = placeholderText;
         }
+
         public void PlaceHolder()
         {
-            if (String.IsNullOrEmpty(TextBox.Text) || String.IsNullOrWhiteSpace(TextBox.Text) &&
-                TextBox.Foreground == Brushes.Black)
+            if (WPFTextPassBox.TextBoxIsNull(TextBox))
             {
                 TextBox.Foreground = Brushes.Gray;
                 TextBox.Text = Placeholdertext;

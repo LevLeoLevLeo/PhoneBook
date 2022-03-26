@@ -48,9 +48,14 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Support\Check\PsbNull.cs" />
     <Compile Include="Classes\Support\DescriptionInterface\DesrtiptionInterface.cs" />
+    <Compile Include="Classes\Support\Placeholder\PsbPlaceholderGotFocus.cs" />
+    <Compile Include="Classes\Support\Placeholder\PsbPlaceholderLostFocus.cs" />
     <Compile Include="Classes\Support\Placeholder\TxbPlaceholderGotFocus.cs" />
-    <Compile Include="Classes\WPFTextBoxHelp.cs" />
+    <Compile Include="Classes\Support\Placeholder\TxbPlaceholderLostFocus.cs" />
+    <Compile Include="Classes\Support\Check\TxbNull.cs" />
+    <Compile Include="Classes\WPFTextPassBox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -74,7 +79,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Classes\Support\Check\" />
     <Folder Include="Classes\Support\Validation\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -8,11 +8,11 @@ using System.Windows;
 // атрибутов. Отредактируйте значения этих атрибутов, чтобы изменить
 // связанные с этой сборкой.
 [assembly: AssemblyTitle("WPFTextBoxHelp")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Библиотека для WPF, представляющая для WPF проверку TextBox'ов, а также реализацию Placeholder'ов.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("WPFTextBoxHelp")]
-[assembly: AssemblyCopyright("Copyright ©  2022")]
+[assembly: AssemblyCopyright("Copyright © LevLeo 2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -11,12 +11,15 @@ namespace WPFTextBoxHelp.Classes.Support.Placeholder
     public class TxbPlaceholderGotFocus : IPlaceHolder
     {
         private TextBox TextBox { get; set; }
+
         private string Placeholdertext { get; set; }
+
         public TxbPlaceholderGotFocus(ref TextBox textBox, ref string placeholdertext)
         {
             TextBox = textBox;
             Placeholdertext = placeholdertext;
         }
+
         public void PlaceHolder()
         {
             if (TextBox.Text == Placeholdertext && TextBox.Foreground == Brushes.Gray)

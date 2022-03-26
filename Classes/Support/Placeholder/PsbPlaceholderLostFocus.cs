@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using WPFTextBoxHelp.Classes.Support.Validation;
 using static WPFTextBoxHelp.Classes.Support.DesrtiptionInterface;
 
 namespace WPFTextBoxHelp.Classes.Support.Placeholder
@@ -12,16 +13,18 @@ namespace WPFTextBoxHelp.Classes.Support.Placeholder
     public class PsbPlaceholderLostFocus : IPlaceHolder
     {
         private TextBox TextBox { get; set; }
+
         private PasswordBox PasswordBox { get; set; }
+
         public PsbPlaceholderLostFocus (ref TextBox textBox, ref PasswordBox passwordBox)
         {
             TextBox = textBox;
             PasswordBox = passwordBox;
         }
+
         public void PlaceHolder()
         {
-            if (String.IsNullOrEmpty(PasswordBox.Password) ||
-                String.IsNullOrWhiteSpace(PasswordBox.Password) && PasswordBox.Foreground == Brushes.Black)
+            if (WPFTextPassBox.TextBoxIsNull(TextBox) && PasswordBox.Foreground == Brushes.Black)
             {
                 PasswordBox.Password = String.Empty;
                 PasswordBox.Visibility = Visibility.Collapsed;
