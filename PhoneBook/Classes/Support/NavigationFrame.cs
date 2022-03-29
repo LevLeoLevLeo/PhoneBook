@@ -2,7 +2,7 @@
 
 namespace PhoneBook.Classes.Support
 {
-    public class NavigationFrame
+    public static class NavigationFrame
     {
         public static Frame frame;
     }
