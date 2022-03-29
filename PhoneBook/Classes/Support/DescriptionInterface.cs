@@ -21,5 +21,16 @@ namespace PhoneBook.Classes.Support
             /// </summary>
             void GoToPage();
         }
+        
+        /// <summary>
+        /// Интерфейс, описывающий логику при инициализации окна/страницы.
+        /// </summary>
+        public interface IInit
+        {
+            /// <summary>
+            /// Происходит при инициализации окна/страницы.
+            /// </summary>
+            void Initialization();
+        }
     }
 }
