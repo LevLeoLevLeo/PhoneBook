@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PhoneBook.Classes.Support;
+using PhoneBook.PageList.PageAuthReg;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,27 @@ namespace PhoneBook
         public MainWindow()
         {
             InitializeComponent();
+            NavigationFrame.frame = FrmAuthReg;
+            FrmAuthReg.Navigate(new PageAuth());
+        }
+
+        private void BtnAuthorize_Click(object sender, RoutedEventArgs e)
+        {
+            BtnAuthorize.IsDefault = true;
+            BtnRegistration.IsDefault = false;
+            FrmAuthReg.Navigate(new PageAuth());
+        }
+
+        private void BtnRegistration_Click(object sender, RoutedEventArgs e)
+        {
+            BtnRegistration.IsDefault = true;
+            BtnAuthorize.IsDefault = false;
+            FrmAuthReg.Navigate(new PageReg());
+        }
+
+        private void BtnCloseApp_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
         }
     }
 }

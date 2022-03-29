@@ -5,8 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PhoneBook"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Авторизация" Height="417" Width="520" MaxHeight="417px" MinHeight="417"
+        MinWidth="520px" MaxWidth="520" ResizeMode="NoResize">
+
     <Grid>
         
+        <!--#region Разметка и дизайн окна-->
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70px"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="41px"/>
+        </Grid.RowDefinitions>
+        
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#FFAFBD" Offset="0"/>
+                <GradientStop Color="#FFC3A0" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        
+        <!--#endregion-->
+        
+        <!--#region Кнопки окна-->
+
+        <Button Name="BtnAuthorize" Style="{StaticResource BtnAuthReg}" Content="Авторизация"
+            HorizontalAlignment="Left" Click="BtnAuthorize_Click" IsDefault="True"/>
+
+        <Button Name="BtnRegistration" Style="{StaticResource BtnAuthReg}" Content="Регистрация"
+                HorizontalAlignment="Right" Click="BtnRegistration_Click"/>
+
+        <Button Name="BtnCloseApp" Content="Закрыть" HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                Margin="0 0 10 10" Grid.Row="2" Click="BtnCloseApp_Click"/>
+        
+        <!--#endregion-->
+
+        <Frame Name="FrmAuthReg" NavigationUIVisibility="Hidden" Grid.Row="1"/>
+
     </Grid>
+
 </Window>
