@@ -17,22 +17,30 @@
                      LostKeyboardFocus="TxbLogin_LostKeyboardFocus"/>
 
             <TextBlock Style="{StaticResource TxtNotCorrect}"
-                       Name="TxtLoginNotCorrect" Text="Этот логин уже занят"/>
+                       Name="TxtLoginNotCorrect" Text="Этот логин уже занят"
+                       Visibility="Visible"/>
 
             <TextBox Name="TxbNewEmail" Text="Почта..." Margin="0 10 0 0"
                      GotKeyboardFocus="TxbNewEmail_GotKeyboardFocus"
                      LostKeyboardFocus="TxbNewEmail_LostKeyboardFocus"/>
 
             <TextBlock Style="{StaticResource TxtNotCorrect}"
-                       Name="TxtEmailNotCorrect" Text="Введена некорректная почта"/>
+                       Name="TxtEmailNotCorrect" Text="Введена некорректная почта" Visibility="Visible"/>
 
             <TextBox Name="TxbNewPassword" Text="Пароль..." Margin="0 10 0 0"
                      GotKeyboardFocus="TxbNewPassword_GotKeyboardFocus"
-                     LostKeyboardFocus="TxbNewPassword_LostKeyboardFocus"/>
+                     LostKeyboardFocus="TxbNewPassword_LostKeyboardFocus"
+                     TextChanged="TxbNewPassword_TextChanged"/>
 
             <PasswordBox Name="PsbNewPassword" Margin="0 10 0 0"
                          GotKeyboardFocus="TxbNewPassword_GotKeyboardFocus"
-                         LostKeyboardFocus="TxbNewPassword_LostKeyboardFocus"/>
+                         LostKeyboardFocus="TxbNewPassword_LostKeyboardFocus"
+                         PasswordChanged="PsbNewPassword_PasswordChanged"/>
+
+            <CheckBox Name="ChbShowPass" HorizontalAlignment="Right" Margin="0 -33 -135 0"
+                      HorizontalContentAlignment="Center" VerticalAlignment="Center"
+                      FontFamily="Roboto" Padding="3 -0.5 0 0" FontSize="14"
+                      Content="Показать пароль" Click="ChbShowPass_Click"/>
 
             <TextBox Name="TxbRepeatNewPassword" Text="Повторите пароль..." Margin="0 10 0 0"
                      GotKeyboardFocus="TxbRepeatNewPassword_GotKeyboardFocus"
@@ -43,7 +51,7 @@
                          LostKeyboardFocus="TxbRepeatNewPassword_LostKeyboardFocus"/>
 
             <TextBlock Style="{StaticResource TxtNotCorrect}"
-                       Name="TxtPasswordNotMatch" Text="Пароли не совпадают"/>
+                       Name="TxtPasswordNotMatch" Text="Пароли не совпадают" Visibility="Visible"/>
 
             <Button Name="BtnRegistration" Content="Зарегестрироваться" Margin="0 10 0 0" Width="170px"
                     Click="BtnRegistration_Click"/>

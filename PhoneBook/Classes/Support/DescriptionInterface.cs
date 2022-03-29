@@ -32,5 +32,16 @@ namespace PhoneBook.Classes.Support
             /// </summary>
             void Initialization();
         }
+
+        /// <summary>
+        /// Интерфейс, описывающий происходящее при изменеии текста в Text/PasswordBox'ас.
+        /// </summary>
+        public interface ITextPassChange
+        {
+            /// <summary>
+            /// Происходит при изменении текста в Text/PasswordBox'ас.
+            /// </summary>
+            void TextPassChange();
+        }
     }
 }

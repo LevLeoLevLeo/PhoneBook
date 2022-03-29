@@ -49,6 +49,10 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WPFTextBoxHelp, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>LibraryAdd\WPFTextBoxHelp.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -117,6 +121,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Asset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LibraryAdd\WPFTextBoxHelp.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
