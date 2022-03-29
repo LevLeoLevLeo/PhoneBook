@@ -1,6 +1,8 @@
 ﻿#region Using
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using WPFTextBoxHelp.Classes.Support.Check;
 using WPFTextBoxHelp.Classes.Support.Placeholder;
 using WPFTextBoxHelp.Classes.Support.Validation;
 #endregion
@@ -58,9 +60,9 @@ namespace WPFTextBoxHelp.Classes
             PsbPlaceholderLostFocus psbPlaceholderLostFocus = new PsbPlaceholderLostFocus(ref textBox, ref passwordBox);
             psbPlaceholderLostFocus.PlaceHolder();
         }
-        
+
         #endregion
-        
+
         #region IsNull
 
         /// <summary>
@@ -74,6 +76,14 @@ namespace WPFTextBoxHelp.Classes
             return txbNull.Isnull();
         }
 
+        public static bool PassBoxIsNull(PasswordBox passwordBox)
+        {
+            PsbNull psbNull = new PsbNull(ref passwordBox);
+            return psbNull.Isnull();
+        }
+
+        #endregion
+        
         /// <summary>
         /// Возвращает true, если оба PasswordBox'а равны.
         /// </summary>
@@ -86,6 +96,5 @@ namespace WPFTextBoxHelp.Classes
             return psbRepeatPassword.IsValid();
         }
 
-        #endregion
     }
 }

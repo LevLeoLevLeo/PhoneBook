@@ -55,6 +55,8 @@
     <Compile Include="Classes\Support\Placeholder\TxbPlaceholderGotFocus.cs" />
     <Compile Include="Classes\Support\Placeholder\TxbPlaceholderLostFocus.cs" />
     <Compile Include="Classes\Support\Check\TxbNull.cs" />
+    <Compile Include="Classes\Support\Validation\PsbRepeatPassword.cs" />
+    <Compile Include="Classes\Support\Validation\ValidEmail.cs" />
     <Compile Include="Classes\WPFTextPassBox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -78,8 +80,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\Support\Validation\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

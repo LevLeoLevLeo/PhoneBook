@@ -32,7 +32,7 @@
         /// <summary>
         /// Интерфейс, описывающий проверку вводимых данных в Text/Passbox
         /// </summary>
-        public interface ITextPassValidation
+        public interface ITextPassBoxValidation
         {
             bool IsValid();
         }

@@ -24,7 +24,7 @@ namespace WPFTextBoxHelp.Classes.Support.Placeholder
 
         public void PlaceHolder()
         {
-            if (WPFTextPassBox.TextBoxIsNull(TextBox) && PasswordBox.Foreground == Brushes.Black)
+            if (WPFTextPassBox.PassBoxIsNull(PasswordBox) && PasswordBox.Foreground == Brushes.Black)
             {
                 PasswordBox.Password = String.Empty;
                 PasswordBox.Visibility = Visibility.Collapsed;
