@@ -9,6 +9,47 @@
       Title="PageReg">
 
     <Grid>
+
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+
+            <TextBox Name="TxbNewLogin" Text="Логин..."
+                     GotKeyboardFocus="TxbLogin_GotKeyboardFocus"
+                     LostKeyboardFocus="TxbLogin_LostKeyboardFocus"/>
+
+            <TextBlock Style="{StaticResource TxtNotCorrect}"
+                       Name="TxtLoginNotCorrect" Text="Этот логин уже занят"/>
+
+            <TextBox Name="TxbNewEmail" Text="Почта..." Margin="0 10 0 0"
+                     GotKeyboardFocus="TxbNewEmail_GotKeyboardFocus"
+                     LostKeyboardFocus="TxbNewEmail_LostKeyboardFocus"/>
+
+            <TextBlock Style="{StaticResource TxtNotCorrect}"
+                       Name="TxtEmailNotCorrect" Text="Введена некорректная почта"/>
+
+            <TextBox Name="TxbNewPassword" Text="Пароль..." Margin="0 10 0 0"
+                     GotKeyboardFocus="TxbNewPassword_GotKeyboardFocus"
+                     LostKeyboardFocus="TxbNewPassword_LostKeyboardFocus"/>
+
+            <PasswordBox Name="PsbNewPassword" Margin="0 10 0 0"
+                         GotKeyboardFocus="TxbNewPassword_GotKeyboardFocus"
+                         LostKeyboardFocus="TxbNewPassword_LostKeyboardFocus"/>
+
+            <TextBox Name="TxbRepeatNewPassword" Text="Повторите пароль..." Margin="0 10 0 0"
+                     GotKeyboardFocus="TxbRepeatNewPassword_GotKeyboardFocus"
+                     LostKeyboardFocus="TxbRepeatNewPassword_LostKeyboardFocus"/>
+
+            <PasswordBox Name="PsbRepeatNewPassword" Margin="0 10 0 0"
+                         GotKeyboardFocus="TxbRepeatNewPassword_GotKeyboardFocus"
+                         LostKeyboardFocus="TxbRepeatNewPassword_LostKeyboardFocus"/>
+
+            <TextBlock Style="{StaticResource TxtNotCorrect}"
+                       Name="TxtPasswordNotMatch" Text="Пароли не совпадают"/>
+
+            <Button Name="BtnRegistration" Content="Зарегестрироваться" Margin="0 10 0 0" Width="170px"
+                    Click="BtnRegistration_Click"/>
+
+        </StackPanel>
         
     </Grid>
+
 </Page>

@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace PhoneBook.PageList.PageAuthReg
 {
@@ -23,6 +12,55 @@ namespace PhoneBook.PageList.PageAuthReg
         public PageReg()
         {
             InitializeComponent();
+        }
+
+        #region placeholder
+
+        private void TxbLogin_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+
+        }
+
+        private void TxbLogin_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+
+        }
+
+        private void TxbNewEmail_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+
+        }
+
+        private void TxbNewEmail_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+
+        }
+
+        private void TxbNewPassword_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+
+        }
+
+        private void TxbNewPassword_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+
+        }
+
+        private void TxbRepeatNewPassword_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+
+        }
+
+        private void TxbRepeatNewPassword_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+
+        }
+
+        #endregion
+
+        private void BtnRegistration_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

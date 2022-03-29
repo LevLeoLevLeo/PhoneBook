@@ -15,7 +15,7 @@
             <Setter Property="Foreground" Value="Gray"/>
             <Setter Property="Background" Value="#fff"/>
             <Setter Property="BorderBrush" Value="#29435C"/>
-            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderThickness" Value="2"/>
             <Setter Property="Width" Value="200"/>
             <Setter Property="Height" Value="33"/>
             <Setter Property="HorizontalContentAlignment" Value="Left"/>
@@ -36,22 +36,37 @@
                 
             </Setter>
 
-
-
         </Style>
 
         <Style TargetType="PasswordBox">
 
             <Setter Property="FontFamily" Value="Roboto"/>
-            <Setter Property="FontSize" Value="12"/>
             <Setter Property="FontWeight" Value="Regular"/>
-            <Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="BorderBrush" Value="#000"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="Gray"/>
+            <Setter Property="Background" Value="#fff"/>
+            <Setter Property="BorderBrush" Value="#29435C"/>
+            <Setter Property="BorderThickness" Value="2"/>
             <Setter Property="Width" Value="200"/>
             <Setter Property="Height" Value="33"/>
             <Setter Property="HorizontalContentAlignment" Value="Left"/>
-            <Setter Property="Padding" Value="10 0 0 0"/>
             <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="10 0 0 0"/>
+            <Setter Property="Visibility" Value="Collapsed"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="PasswordBox">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Background="{TemplateBinding Background}" CornerRadius="15">
+                            <ScrollViewer x:Name="PART_ContentHost" Focusable="False"
+                                          HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+
+
+            </Setter>
 
         </Style>
 
@@ -76,7 +91,6 @@
                     <ControlTemplate TargetType="Button">
 
                         <Border Background="{TemplateBinding Background}" CornerRadius="15">
-
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
                         </Border>
                     </ControlTemplate>
@@ -161,6 +175,15 @@
             <Setter Property="FontFamily" Value="Roboto"/>
             <Setter Property="FontSize" Value="14"/>
             <Setter Property="FontWeight" Value="Regular"/>
+
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="TxtNotCorrect"
+               BasedOn="{StaticResource TxtMain}">
+
+            <Setter Property="FontSize" Value="8pt"/>
+            <Setter Property="Foreground" Value="Red"/>
+            <Setter Property="Visibility" Value="Collapsed"/>
 
         </Style>
 

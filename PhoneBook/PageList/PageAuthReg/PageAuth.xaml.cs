@@ -25,7 +25,29 @@ namespace PhoneBook.PageList.PageAuthReg
             InitializeComponent();
         }
 
+        #region Placeholder
         private void TxbLogin_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+         
+        }
+
+        private void TxbLogin_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            
+        }
+
+        private void TxbPassword_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            
+        }
+
+        private void TxbPassword_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            
+        }
+
+        #endregion
+        private void BtnAuthorize_Click(object sender, RoutedEventArgs e)
         {
 
         }
