@@ -24,5 +24,10 @@ namespace PhoneBook.PageList.PageAuthReg
         {
             InitializeComponent();
         }
+
+        private void TxbLogin_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+
+        }
     }
 }

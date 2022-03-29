@@ -64,6 +64,11 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Classes\Execution\Execute.cs" />
+    <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinAuthReg\ExeGoToAuthPage.cs" />
+    <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinAuthReg\ExeGoToRegPage.cs" />
+    <Compile Include="Classes\InitializationDescription\Init.cs" />
+    <Compile Include="Classes\InitializationDescription\Support\InitWinAuthReg.cs" />
+    <Compile Include="Classes\Support\DescriptionInterface.cs" />
     <Compile Include="Classes\Support\NavigationFrame.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -112,7 +117,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Asset\" />
-    <Folder Include="Classes\Execution\Support\Button\Click\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
