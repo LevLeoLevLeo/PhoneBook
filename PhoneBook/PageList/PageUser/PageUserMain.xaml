@@ -9,22 +9,37 @@
       Title="PageUserMain">
 
     <Grid>
+        
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"
                     VerticalAlignment="Center" Margin="30 0 0 300">
+            
             <TextBlock Style="{StaticResource TxtMain}" FontWeight="Bold" Text="Списки:"
                        FontSize="24pt"/>
+            
             <ComboBox Name="CmbPhoneList" FontFamily="Roboto" FontSize="16pt" Width="150px"
                       Margin="10 0 0 0"/>
-            <TextBox Name="TxbSearchRecord" Width="200px" Text="Имя, номер, описание"
-                     HorizontalAlignment="Center" VerticalAlignment="Top"
-                    Margin="100 0 0 0"/>
+
+            <StackPanel Orientation="Vertical" Margin="100 0 0 0">
+            
+                <TextBox Name="TxbSearchRecord" Width="250px" Text="Имя, номер, описание"
+                     HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                
+                <StackPanel Orientation="Horizontal">
+                    
+                    <RadioButton GroupName="RdBtnSerchGroup" Width="95" HorizontalContentAlignment="Center"
+                                 VerticalContentAlignment="Center" FontFamily="Roboto" FontSize="8pt"
+                                 Content="Поиск в списке" Margin="0 0 0 0" Padding="-6 2.6 0 0"/>
+
+                    <RadioButton GroupName="RdBtnSerchGroup" Content="Поиск во всех списках" Width="128"
+                                 HorizontalContentAlignment="Center" Padding="-6 2.6 0 0"
+                                 VerticalContentAlignment="Center" FontFamily="Roboto" FontSize="8pt"/>
+                
+                </StackPanel>
+        
+            </StackPanel>
+        
         </StackPanel>
-        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top"
-                    Margin="0 0 0 0">
-            <RadioButton GroupName="RdBtnSerchGroup" FontFamily="Roboto" FontSize="8pt"
-                         Content="Поиск в списке"/>
-            <RadioButton GroupName="RdBtnSerchGroup" Content="Поиск во всех списках"/>
-        </StackPanel>
+        
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left"
                     VerticalAlignment="Center" Margin="30 0 0 200">

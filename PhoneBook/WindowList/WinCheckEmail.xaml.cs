@@ -28,5 +28,10 @@ namespace PhoneBook.WindowList
         {
 
         }
+
+        private void BtnRegistration_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
