@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhoneBook.Classes.Execution;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,17 +30,17 @@ namespace PhoneBook.PageList.PageAuthReg
         #region Placeholder
         private void TxbLogin_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
-            WPFTextPassBox.TextBoxPlaceholderGotFocus(TxbLogin, "Логин или почта...");
+            WPFTextPassBox.TextBoxPlaceholderGotFocus(TxbLogin, "Логин или почта");
         }
 
         private void TxbLogin_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
-            WPFTextPassBox.TextBoxPlaceholderLostFocus(TxbLogin, "Логин или почта...");
+            WPFTextPassBox.TextBoxPlaceholderLostFocus(TxbLogin, "Логин или почта");
         }
 
         private void TxbPassword_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
-            WPFTextPassBox.PasswordBoxPlaceholderGotFocus(TxbPassword, PsbPassword, "Пароль...");
+            WPFTextPassBox.PasswordBoxPlaceholderGotFocus(TxbPassword, PsbPassword, "Пароль");
         }
 
         private void TxbPassword_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
@@ -65,7 +66,7 @@ namespace PhoneBook.PageList.PageAuthReg
 
         private void ChbShowPass_Click(object sender, RoutedEventArgs e)
         {
-
+            Execute.ShowHidePassword(ChbShowPass, TxbPassword, PsbPassword);
         }
 
         private void TxbPassword_TextChanged(object sender, TextChangedEventArgs e)

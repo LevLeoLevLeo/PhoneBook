@@ -43,5 +43,16 @@ namespace PhoneBook.Classes.Support
             /// </summary>
             void TextPassChange();
         }
+        
+        /// <summary>
+        /// Интерфейс, описывающий показ пароля.
+        /// </summary>
+        public interface IShowPassword
+        {
+            /// <summary>
+            /// Реализует показ пароля.
+            /// </summary>
+            void ShowPassword();
+        }
     }
 }

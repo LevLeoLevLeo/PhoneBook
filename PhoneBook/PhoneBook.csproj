@@ -70,6 +70,8 @@
     <Compile Include="Classes\Execution\Execute.cs" />
     <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinAuthReg\ExeGoToAuthPage.cs" />
     <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinAuthReg\ExeGoToRegPage.cs" />
+    <Compile Include="Classes\Execution\Support\CheckBoxDescription\Click\AuthRegPage\ExeChckBoxShowPass.cs" />
+    <Compile Include="Classes\Execution\Support\TextPasswordBox\TextPassChange\RegPage\ExePsbRepeatPasswordChange.cs" />
     <Compile Include="Classes\InitializationDescription\Init.cs" />
     <Compile Include="Classes\InitializationDescription\Support\InitWinAuthReg.cs" />
     <Compile Include="Classes\Support\DescriptionInterface.cs" />

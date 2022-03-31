@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhoneBook.Classes.Execution;
+using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -21,27 +22,27 @@ namespace PhoneBook.PageList.PageAuthReg
 
         private void TxbLogin_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
-            WPFTextPassBox.TextBoxPlaceholderGotFocus(TxbNewLogin, "Логин...");
+            WPFTextPassBox.TextBoxPlaceholderGotFocus(TxbNewLogin, "Логин");
         }
 
         private void TxbLogin_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
-            WPFTextPassBox.TextBoxPlaceholderLostFocus(TxbNewLogin, "Логин...");
+            WPFTextPassBox.TextBoxPlaceholderLostFocus(TxbNewLogin, "Логин");
         }
 
         private void TxbNewEmail_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
-            WPFTextPassBox.TextBoxPlaceholderGotFocus(TxbNewEmail, "Почта...");
+            WPFTextPassBox.TextBoxPlaceholderGotFocus(TxbNewEmail, "Почта");
         }
 
         private void TxbNewEmail_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
-            WPFTextPassBox.TextBoxPlaceholderLostFocus(TxbNewEmail, "Почта...");
+            WPFTextPassBox.TextBoxPlaceholderLostFocus(TxbNewEmail, "Почта");
         }
 
         private void TxbNewPassword_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
-            WPFTextPassBox.PasswordBoxPlaceholderGotFocus(TxbNewPassword, PsbNewPassword, "Пароль...");
+            WPFTextPassBox.PasswordBoxPlaceholderGotFocus(TxbNewPassword, PsbNewPassword, "Пароль");
         }
 
         private void TxbNewPassword_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
@@ -52,7 +53,7 @@ namespace PhoneBook.PageList.PageAuthReg
         private void TxbRepeatNewPassword_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
             WPFTextPassBox.PasswordBoxPlaceholderGotFocus(TxbRepeatNewPassword, PsbRepeatNewPassword,
-                "Повторите пароль...");
+                "Повторите пароль");
         }
 
         private void TxbRepeatNewPassword_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
@@ -71,7 +72,7 @@ namespace PhoneBook.PageList.PageAuthReg
         
         private void TxbNewEmail_TextChanged(object sender, TextChangedEventArgs e)
         {
-            TxbNewEmail.BorderBrush = (Brush)new BrushConverter().ConvertFromString("#0BC00B");
+            
         }
 
         #endregion
@@ -88,7 +89,12 @@ namespace PhoneBook.PageList.PageAuthReg
 
         private void ChbShowPass_Click(object sender, RoutedEventArgs e)
         {
+            Execute.ShowHidePassword(ChbShowPass, TxbNewPassword, PsbNewPassword);
+        }
 
+        private void PsbRepeatNewPassword_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            Execute.RepeatPassword(TxbRepeatNewPassword, PsbNewPassword, PsbRepeatNewPassword, TxtPasswordNotMatch);
         }
     }
 }

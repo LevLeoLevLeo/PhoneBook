@@ -1,4 +1,6 @@
 ﻿using PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg;
+using PhoneBook.Classes.Execution.Support.CheckBoxDescription.Click.AuthRegPage;
+using PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.RegPage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,6 +40,25 @@ namespace PhoneBook.Classes.Execution
             exeGoToRegPage.GoToPage();
         }
 
+        /// <summary>
+        /// Скрытие/показ пароля по нажатию на checkbox.
+        /// </summary>
+        /// <param name="checkBox"></param>
+        /// <param name="textBox"></param>
+        /// <param name="passwordBox"></param>
+        public static void ShowHidePassword(CheckBox checkBox, TextBox textBox, PasswordBox passwordBox)
+        {
+            ExeChckBoxShowPass exeChckBoxShowPass = new ExeChckBoxShowPass(ref checkBox,
+                ref textBox, ref passwordBox);
+            exeChckBoxShowPass.ShowPassword();
+        }
+        public static void RepeatPassword(TextBox textBox, PasswordBox passwordBox,
+            PasswordBox passwordBox1, TextBlock textBlock)
+        {
+            ExePsbRepeatPasswordChange exePsbRepeatPasswordChange = new ExePsbRepeatPasswordChange(ref textBox,
+                ref passwordBox, ref passwordBox1, ref textBlock);
+            exePsbRepeatPasswordChange.TextPassChange();
+        }
         #endregion
 
     }
