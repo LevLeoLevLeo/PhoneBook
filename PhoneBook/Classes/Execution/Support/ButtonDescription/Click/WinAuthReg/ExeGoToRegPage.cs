@@ -8,7 +8,7 @@ namespace PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg
     /// <summary>
     /// Переход на страницу регистрации.
     /// </summary>
-    class ExeGoToRegPage : IGoToPage
+    class ExeGoToRegPage : IClick
     {
         private Button ButtonAuth { get; set; }
         private Button ButtonReg { get; set; }
@@ -18,7 +18,7 @@ namespace PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg
             ButtonAuth = buttonAuth;
             ButtonReg = buttonReg;
         }
-        public void GoToPage()
+        public void Click()
         {
             ButtonAuth.IsDefault = false;
             ButtonReg.IsDefault = true;

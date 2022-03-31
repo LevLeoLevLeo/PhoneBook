@@ -71,3 +71,5 @@ C:\Users\Гришин\Desktop\PhoneBook\PhoneBook\obj\Debug\PageList\PageUser\Pa
 C:\Users\Гришин\Desktop\PhoneBook\PhoneBook\obj\Debug\WindowList\WinUser.g.cs
 C:\Users\Гришин\Desktop\PhoneBook\PhoneBook\obj\Debug\PageList\PageUser\PageUserMain.baml
 C:\Users\Гришин\Desktop\PhoneBook\PhoneBook\obj\Debug\WindowList\WinUser.baml
+C:\Users\Гришин\Desktop\PhoneBook\PhoneBook\obj\Debug\WindowList\WinCheckEmail.g.cs
+C:\Users\Гришин\Desktop\PhoneBook\PhoneBook\obj\Debug\WindowList\WinCheckEmail.baml

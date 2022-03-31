@@ -59,11 +59,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinAuthReg\ExeAuthorize.cs" />
+    <Compile Include="Classes\Support\WindowTransfer.cs" />
     <Compile Include="PageList\PageAuthReg\PageReg.xaml.cs">
       <DependentUpon>PageReg.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageList\PageUser\PageUserMain.xaml.cs">
       <DependentUpon>PageUserMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowList\WinCheckEmail.xaml.cs">
+      <DependentUpon>WinCheckEmail.xaml</DependentUpon>
     </Compile>
     <Compile Include="WindowList\WinUser.xaml.cs">
       <DependentUpon>WinUser.xaml</DependentUpon>
@@ -102,6 +107,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="PageList\PageUser\PageUserMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowList\WinCheckEmail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

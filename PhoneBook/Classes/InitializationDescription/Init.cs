@@ -15,6 +15,18 @@ namespace PhoneBook.Classes.InitializationDescription
             InitWinAuthReg initWinAuthReg = new InitWinAuthReg(ref frame);
             initWinAuthReg.Initialization();
         }
+
+        /// <summary>
+        /// Инициализация кастомного messagebox'а.
+        /// </summary>
+        /// <param name="TextMessage"></param>
+        /// <param name="TextBlock"></param>
+        /// <param name="TypeMessage"></param>
+        /// <param name="ButtonEn"></param>
+        /// <param name="ButtonOk"></param>
+        /// <param name="ButtonNo"></param>
+        /// <param name="ButtonYes"></param>
+        /// <param name="ButtonCancel"></param>
         public static void WinMessageBox(string TextMessage, TextBlock TextBlock,
             TypeMessage TypeMessage, ButtonEn ButtonEn, Button ButtonOk,
             Button ButtonNo, Button ButtonYes, Button ButtonCancel)

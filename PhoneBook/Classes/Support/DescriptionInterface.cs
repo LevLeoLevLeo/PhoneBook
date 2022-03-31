@@ -12,14 +12,14 @@ namespace PhoneBook.Classes.Support
     public class DescriptionInterface
     {
         /// <summary>
-        /// Интерфейс, описывающий переход на другую страницу.
+        /// Интерфейс, описывающий событие "click".
         /// </summary>
-        public interface IGoToPage
+        public interface IClick
         {
             /// <summary>
             /// Переход на другую страницу.
             /// </summary>
-            void GoToPage();
+            void Click();
         }
         
         /// <summary>
@@ -31,17 +31,6 @@ namespace PhoneBook.Classes.Support
             /// Происходит при инициализации окна/страницы.
             /// </summary>
             void Initialization();
-        }
-
-        /// <summary>
-        /// Интерфейс, описывающий происходящее при изменеии текста в Text/PasswordBox'ас.
-        /// </summary>
-        public interface ITextPassChange
-        {
-            /// <summary>
-            /// Происходит при изменении текста в Text/PasswordBox'ас.
-            /// </summary>
-            void TextPassChange();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhoneBook.Classes.Execution;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -48,9 +49,10 @@ namespace PhoneBook.PageList.PageAuthReg
         }
 
         #endregion
+       
         private void BtnAuthorize_Click(object sender, RoutedEventArgs e)
         {
-
+            Execute.Authorization(TxbLogin, TxbPassword, PsbPassword, ChbShowPass);
         }
 
         private void PsbPassword_PasswordChanged(object sender, RoutedEventArgs e)
