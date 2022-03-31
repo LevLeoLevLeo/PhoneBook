@@ -57,7 +57,7 @@ namespace PhoneBook.PageList.PageAuthReg {
         #line hidden
         
         
-        #line 22 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
+        #line 23 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox TxbNewEmail;
         
@@ -65,7 +65,7 @@ namespace PhoneBook.PageList.PageAuthReg {
         #line hidden
         
         
-        #line 27 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
+        #line 28 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBlock TxtEmailNotCorrect;
         
@@ -73,7 +73,7 @@ namespace PhoneBook.PageList.PageAuthReg {
         #line hidden
         
         
-        #line 29 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
+        #line 30 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox TxbNewPassword;
         
@@ -81,7 +81,7 @@ namespace PhoneBook.PageList.PageAuthReg {
         #line hidden
         
         
-        #line 34 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
+        #line 35 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.PasswordBox PsbNewPassword;
         
@@ -89,7 +89,7 @@ namespace PhoneBook.PageList.PageAuthReg {
         #line hidden
         
         
-        #line 39 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
+        #line 40 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.CheckBox ChbShowPass;
         
@@ -97,7 +97,7 @@ namespace PhoneBook.PageList.PageAuthReg {
         #line hidden
         
         
-        #line 44 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
+        #line 45 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.TextBox TxbRepeatNewPassword;
         
@@ -105,7 +105,7 @@ namespace PhoneBook.PageList.PageAuthReg {
         #line hidden
         
         
-        #line 48 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
+        #line 49 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.PasswordBox PsbRepeatNewPassword;
         
@@ -179,13 +179,13 @@ namespace PhoneBook.PageList.PageAuthReg {
             case 3:
             this.TxbNewEmail = ((System.Windows.Controls.TextBox)(target));
             
-            #line 23 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
+            #line 24 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
             this.TxbNewEmail.GotKeyboardFocus += new System.Windows.Input.KeyboardFocusChangedEventHandler(this.TxbNewEmail_GotKeyboardFocus);
             
             #line default
             #line hidden
             
-            #line 24 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
+            #line 25 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
             this.TxbNewEmail.LostKeyboardFocus += new System.Windows.Input.KeyboardFocusChangedEventHandler(this.TxbNewEmail_LostKeyboardFocus);
             
             #line default
@@ -197,19 +197,19 @@ namespace PhoneBook.PageList.PageAuthReg {
             case 5:
             this.TxbNewPassword = ((System.Windows.Controls.TextBox)(target));
             
-            #line 30 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
+            #line 31 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
             this.TxbNewPassword.GotKeyboardFocus += new System.Windows.Input.KeyboardFocusChangedEventHandler(this.TxbNewPassword_GotKeyboardFocus);
             
             #line default
             #line hidden
             
-            #line 31 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
+            #line 32 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
             this.TxbNewPassword.LostKeyboardFocus += new System.Windows.Input.KeyboardFocusChangedEventHandler(this.TxbNewPassword_LostKeyboardFocus);
             
             #line default
             #line hidden
             
-            #line 32 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
+            #line 33 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
             this.TxbNewPassword.TextChanged += new System.Windows.Controls.TextChangedEventHandler(this.TxbNewPassword_TextChanged);
             
             #line default
@@ -218,19 +218,19 @@ namespace PhoneBook.PageList.PageAuthReg {
             case 6:
             this.PsbNewPassword = ((System.Windows.Controls.PasswordBox)(target));
             
-            #line 35 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
+            #line 36 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
             this.PsbNewPassword.GotKeyboardFocus += new System.Windows.Input.KeyboardFocusChangedEventHandler(this.TxbNewPassword_GotKeyboardFocus);
             
             #line default
             #line hidden
             
-            #line 36 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
+            #line 37 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
             this.PsbNewPassword.LostKeyboardFocus += new System.Windows.Input.KeyboardFocusChangedEventHandler(this.TxbNewPassword_LostKeyboardFocus);
             
             #line default
             #line hidden
             
-            #line 37 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
+            #line 38 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
             this.PsbNewPassword.PasswordChanged += new System.Windows.RoutedEventHandler(this.PsbNewPassword_PasswordChanged);
             
             #line default
@@ -239,7 +239,7 @@ namespace PhoneBook.PageList.PageAuthReg {
             case 7:
             this.ChbShowPass = ((System.Windows.Controls.CheckBox)(target));
             
-            #line 42 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
+            #line 43 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
             this.ChbShowPass.Click += new System.Windows.RoutedEventHandler(this.ChbShowPass_Click);
             
             #line default
@@ -248,13 +248,13 @@ namespace PhoneBook.PageList.PageAuthReg {
             case 8:
             this.TxbRepeatNewPassword = ((System.Windows.Controls.TextBox)(target));
             
-            #line 45 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
+            #line 46 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
             this.TxbRepeatNewPassword.GotKeyboardFocus += new System.Windows.Input.KeyboardFocusChangedEventHandler(this.TxbRepeatNewPassword_GotKeyboardFocus);
             
             #line default
             #line hidden
             
-            #line 46 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
+            #line 47 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
             this.TxbRepeatNewPassword.LostKeyboardFocus += new System.Windows.Input.KeyboardFocusChangedEventHandler(this.TxbRepeatNewPassword_LostKeyboardFocus);
             
             #line default
@@ -263,20 +263,14 @@ namespace PhoneBook.PageList.PageAuthReg {
             case 9:
             this.PsbRepeatNewPassword = ((System.Windows.Controls.PasswordBox)(target));
             
-            #line 49 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
+            #line 50 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
             this.PsbRepeatNewPassword.GotKeyboardFocus += new System.Windows.Input.KeyboardFocusChangedEventHandler(this.TxbRepeatNewPassword_GotKeyboardFocus);
             
             #line default
             #line hidden
             
-            #line 50 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
-            this.PsbRepeatNewPassword.LostKeyboardFocus += new System.Windows.Input.KeyboardFocusChangedEventHandler(this.TxbRepeatNewPassword_LostKeyboardFocus);
-            
-            #line default
-            #line hidden
-            
             #line 51 "..\..\..\..\PageList\PageAuthReg\PageReg.xaml"
-            this.PsbRepeatNewPassword.PasswordChanged += new System.Windows.RoutedEventHandler(this.PsbRepeatNewPassword_PasswordChanged);
+            this.PsbRepeatNewPassword.LostKeyboardFocus += new System.Windows.Input.KeyboardFocusChangedEventHandler(this.TxbRepeatNewPassword_LostKeyboardFocus);
             
             #line default
             #line hidden

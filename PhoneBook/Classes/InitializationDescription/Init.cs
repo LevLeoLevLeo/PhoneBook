@@ -1,10 +1,6 @@
 ﻿using PhoneBook.Classes.InitializationDescription.Support;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Controls;
+using static PhoneBook.Classes.EnumNameSpace.WinMessageBox.EnumWinMessageBox;
 
 namespace PhoneBook.Classes.InitializationDescription
 {
@@ -18,6 +14,15 @@ namespace PhoneBook.Classes.InitializationDescription
         {
             InitWinAuthReg initWinAuthReg = new InitWinAuthReg(ref frame);
             initWinAuthReg.Initialization();
+        }
+        public static void WinMessageBox(string TextMessage, TextBlock TextBlock,
+            TypeMessage TypeMessage, ButtonEn ButtonEn, Button ButtonOk,
+            Button ButtonNo, Button ButtonYes, Button ButtonCancel)
+        {
+            InitWinMessageBox initWinMessageBox = new InitWinMessageBox(ref TextMessage,
+                ref TextBlock, ref TypeMessage, ref ButtonEn, ref ButtonOk, ref ButtonNo,
+                ref ButtonYes, ref ButtonCancel);
+            initWinMessageBox.Initialization();
         }
     }
 }
