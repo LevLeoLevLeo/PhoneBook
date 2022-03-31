@@ -10,27 +10,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PhoneBook.PageList.PageUser
+namespace PhoneBook.WindowList
 {
     /// <summary>
-    /// Логика взаимодействия для PageUserMain.xaml
+    /// Логика взаимодействия для WinCheckEmail.xaml
     /// </summary>
-    public partial class PageUserMain : Page
+    public partial class WinCheckEmail : Window
     {
-        public PageUserMain()
+        public WinCheckEmail()
         {
             InitializeComponent();
         }
 
-        private void BtnAddNumber_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void BtnDeleteNumber_Click(object sender, RoutedEventArgs e)
+        private void BtnThisClose_Click(object sender, RoutedEventArgs e)
         {
 
         }

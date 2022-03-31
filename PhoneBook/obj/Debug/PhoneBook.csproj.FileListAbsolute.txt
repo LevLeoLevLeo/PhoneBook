@@ -67,3 +67,7 @@ C:\Users\Гришин\Desktop\PhoneBook\PhoneBook\obj\Debug\PhoneBook.csproj.Cor
 C:\Users\Гришин\Desktop\PhoneBook\PhoneBook\obj\Debug\PhoneBook.csproj.CopyComplete
 C:\Users\Гришин\Desktop\PhoneBook\PhoneBook\obj\Debug\PhoneBook.exe
 C:\Users\Гришин\Desktop\PhoneBook\PhoneBook\obj\Debug\PhoneBook.pdb
+C:\Users\Гришин\Desktop\PhoneBook\PhoneBook\obj\Debug\PageList\PageUser\PageUserMain.g.cs
+C:\Users\Гришин\Desktop\PhoneBook\PhoneBook\obj\Debug\WindowList\WinUser.g.cs
+C:\Users\Гришин\Desktop\PhoneBook\PhoneBook\obj\Debug\PageList\PageUser\PageUserMain.baml
+C:\Users\Гришин\Desktop\PhoneBook\PhoneBook\obj\Debug\WindowList\WinUser.baml

@@ -1,0 +1,33 @@
+﻿<Window x:Class="PhoneBook.WindowList.WinCheckEmail"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PhoneBook.WindowList"
+        mc:Ignorable="d"
+        Title="Подтверждение почты" Height="417" Width="520" MaxHeight="417px" MinHeight="417"
+        MinWidth="520px" MaxWidth="520" ResizeMode="NoResize">
+    <Grid>
+
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#FFAFBD" Offset="0"/>
+                <GradientStop Color="#FFC3A0" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" TextAlignment="Center"
+                   Style="{StaticResource TxtMain}" TextWrapping="Wrap" FontSize="20pt"
+                   Margin="0 20 0 0"
+                   Text="На Вашу почту был отправлен код для подтверждения регистрации. Пожалуйста, введите его ниже."/>
+
+        <TextBox Name="TxbCheckCode" HorizontalAlignment="Center" VerticalAlignment="Center"
+                 Text="Код подтверждения"/>
+        <Button Name="BtnRegistration" Content="Зарегестрироваться" HorizontalAlignment="Center"
+                VerticalAlignment="Center" Width="160px" Margin="0 74 0 0"
+                Click="BtnRegistration_Click"/>
+        <Button Name="BtnThisClose" Content="Отмена" HorizontalAlignment="Right"
+                VerticalAlignment="Bottom" Margin="0 0 10 10" Click="BtnThisClose_Click"/>
+
+    </Grid>
+</Window>

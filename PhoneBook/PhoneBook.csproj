@@ -59,6 +59,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="PageList\PageAuthReg\PageReg.xaml.cs">
+      <DependentUpon>PageReg.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageList\PageUser\PageUserMain.xaml.cs">
+      <DependentUpon>PageUserMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowList\WinUser.xaml.cs">
+      <DependentUpon>WinUser.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -89,6 +98,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PageList\PageAuthReg\PageReg.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PageList\PageUser\PageUserMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowList\WinUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -99,9 +116,6 @@
     </Compile>
     <Compile Include="PageList\PageAuthReg\PageAuth.xaml.cs">
       <DependentUpon>PageAuth.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PageList\PageAuthReg\PageReg.xaml.cs">
-      <DependentUpon>PageReg.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
