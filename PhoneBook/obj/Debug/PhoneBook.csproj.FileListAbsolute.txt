@@ -81,3 +81,8 @@ C:\Users\LevLe\Desktop\Курсач\PhoneBook\PhoneBook\obj\Debug\MessageDialog\
 C:\Users\LevLe\Desktop\Курсач\PhoneBook\PhoneBook\obj\Debug\PageList\PageUser\PageUserMain.baml
 C:\Users\LevLe\Desktop\Курсач\PhoneBook\PhoneBook\obj\Debug\WindowList\WinCheckEmail.baml
 C:\Users\LevLe\Desktop\Курсач\PhoneBook\PhoneBook\obj\Debug\WindowList\WinUser.baml
+C:\Users\LevLe\Desktop\Курсач\PhoneBook\PhoneBook\bin\Debug\EntityFramework.dll
+C:\Users\LevLe\Desktop\Курсач\PhoneBook\PhoneBook\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\LevLe\Desktop\Курсач\PhoneBook\PhoneBook\bin\Debug\EntityFramework.xml
+C:\Users\LevLe\Desktop\Курсач\PhoneBook\PhoneBook\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\LevLe\Desktop\Курсач\PhoneBook\PhoneBook\bin\Debug\ru\EntityFramework.resources.dll

@@ -46,15 +46,49 @@ namespace PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg
                     switch (CheckBox.IsChecked)
                     {
                         case true:
-                            //Тут будет процесс авторизации
-                            WinUser winUser = new WinUser();
-                            winUser.Show();
-                            WindowTransfer.window.Close();
+                            var UserLogIn = DataBaseEnt.TelephoneBookEntities.User.FirstOrDefault(Alien =>
+                            Alien.Login == TextBoxLogin.Text && Alien.Password == TextBoxPass.Text ||
+                            Alien.Email == TextBoxLogin.Text && Alien.Password == TextBoxPass.Text);
+
+                            if (UserLogIn != null)
+                            {
+                                CurrentUser.currentUser = UserLogIn;
+                                WinUser winUser = new WinUser();
+                                winUser.Show();
+                                WindowTransfer.window.Close();
+                            }
+                            else
+                            {
+                                MessBox messBox = new MessBox("Логин или пароль введены неверно!",
+                                    TypeMessage.Information, ButtonEn.Ok);
+                                messBox.ShowDialog();
+                                PasswordBox.Password = null;
+                            }
                             break;
                         case false:
-                            //Тут будет процесс авторизации
-                            WinUser winUser1 = new WinUser();
-                            winUser1.Show();
+                            var UserLogInT = DataBaseEnt.TelephoneBookEntities.User.FirstOrDefault(Alien =>
+                             Alien.Login == TextBoxLogin.Text && Alien.Password == PasswordBox.Password ||
+                             Alien.Email == TextBoxLogin.Text && Alien.Password == PasswordBox.Password);
+
+                            if (UserLogInT != null)
+                            {
+                                CurrentUser.currentUser = UserLogInT;
+                                WinUser winUser = new WinUser();
+                                winUser.Show();
+                                WindowTransfer.window.Close();
+                            }
+                            else
+                            {
+                                MessBox messBox = new MessBox("Такого пользователя!", TypeMessage.Information,
+                        ButtonEn.Ok);
+                                messBox.ShowDialog();
+                                PasswordBox.Password = null;
+                            }
+                            break;
+                        default:
+                            MessBox messBox2 = new MessBox("Произошла непредвиденная ошибка!", TypeMessage.Information,
+                        ButtonEn.Ok);
+                            messBox2.ShowDialog();
                             break;
                     }
                 }

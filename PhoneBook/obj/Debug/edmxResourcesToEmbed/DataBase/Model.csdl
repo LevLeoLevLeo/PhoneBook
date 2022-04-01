@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TelephoneBookModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="PhoneList">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IdUser" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK_PhoneList_User" FromRole="PhoneList" ToRole="User" />
+    <NavigationProperty Name="PhoneNumber" Relationship="Self.FK_PhoneNumber_PhoneList" FromRole="PhoneList" ToRole="PhoneNumber" />
+  </EntityType>
+  <EntityType Name="PhoneNumber">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Number" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IdPhoneList" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PhoneList" Relationship="Self.FK_PhoneNumber_PhoneList" FromRole="PhoneNumber" ToRole="PhoneList" />
+  </EntityType>
+  <EntityType Name="Role">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="PhoneList" Relationship="Self.FK_PhoneList_User" FromRole="User" ToRole="PhoneList" />
+  </EntityType>
+  <Association Name="FK_PhoneList_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="PhoneList" Type="Self.PhoneList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PhoneList">
+        <PropertyRef Name="IdUser" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PhoneNumber_PhoneList">
+    <End Role="PhoneList" Type="Self.PhoneList" Multiplicity="1" />
+    <End Role="PhoneNumber" Type="Self.PhoneNumber" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhoneList">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PhoneNumber">
+        <PropertyRef Name="IdPhoneList" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TelephoneBookEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="PhoneList" EntityType="Self.PhoneList" />
+    <EntitySet Name="PhoneNumber" EntityType="Self.PhoneNumber" />
+    <EntitySet Name="Role" EntityType="Self.Role" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="User" EntityType="Self.User" />
+    <AssociationSet Name="FK_PhoneList_User" Association="Self.FK_PhoneList_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="PhoneList" EntitySet="PhoneList" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PhoneNumber_PhoneList" Association="Self.FK_PhoneNumber_PhoneList">
+      <End Role="PhoneList" EntitySet="PhoneList" />
+      <End Role="PhoneNumber" EntitySet="PhoneNumber" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
