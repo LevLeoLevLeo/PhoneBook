@@ -30,13 +30,17 @@
         <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="0 0 0 10"
                     HorizontalAlignment="Right" VerticalAlignment="Bottom" Grid.Row="1">
 
-            <Button Name="BtnOk" Content="Ок" Width="50" Visibility="Collapsed"/>
+            <Button Name="BtnOk" Content="Ок" Width="50" Visibility="Collapsed"
+                    Click="BtnOk_Click"/>
             <Button Name="BtnYes" Content="Да" Width="50"
-                    Visibility="Collapsed" Margin="10 0 0 0"/>
+                    Visibility="Collapsed" Margin="10 0 0 0"
+                    Click="BtnYes_Click"/>
             <Button Name="BtnNo" Content="Нет" Width="50"
-                    Visibility="Collapsed" Margin="10 0 0 0"/>
+                    Visibility="Collapsed" Margin="10 0 0 0"
+                    Click="BtnNo_Click"/>
             <Button Name="BtnCancel" Content="Отмена"
-                    Visibility="Collapsed" Margin="10 0 0 0"/>
+                    Visibility="Collapsed" Margin="10 0 0 0"
+                    Click="BtnCancel_Click"/>
 
         </StackPanel>
 

@@ -36,7 +36,7 @@ namespace PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg
                 if (WPFTextPassBox.TextBoxIsNull(TextBoxLogin) || WPFTextPassBox.TextBoxIsNull(TextBoxPass) ||
                     WPFTextPassBox.PassBoxIsNull(PasswordBox))
                 {
-                    MessBox messBox = new MessBox("Вы заполнили не все поля!", TypeMessage.Information,
+                    MessBox messBox = new MessBox("Вы заполнили не все поля!", "Авторизация", TypeMessage.Warning,
                         ButtonEn.Ok);
                     messBox.ShowDialog();
                 }
@@ -59,8 +59,8 @@ namespace PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg
                             }
                             else
                             {
-                                MessBox messBox = new MessBox("Логин или пароль введены неверно!",
-                                    TypeMessage.Information, ButtonEn.Ok);
+                                MessBox messBox = new MessBox("Логин или пароль введены неверно!", "Авторизация",
+                                    TypeMessage.Warning, ButtonEn.Ok);
                                 messBox.ShowDialog();
                                 PasswordBox.Password = null;
                             }
@@ -79,15 +79,15 @@ namespace PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg
                             }
                             else
                             {
-                                MessBox messBox = new MessBox("Такого пользователя!", TypeMessage.Information,
-                        ButtonEn.Ok);
+                                MessBox messBox = new MessBox("Такого пользователя!", "Авторизация",
+                                    TypeMessage.Information, ButtonEn.Ok);
                                 messBox.ShowDialog();
                                 PasswordBox.Password = null;
                             }
                             break;
                         default:
-                            MessBox messBox2 = new MessBox("Произошла непредвиденная ошибка!", TypeMessage.Information,
-                        ButtonEn.Ok);
+                            MessBox messBox2 = new MessBox("Произошла непредвиденная ошибка!", "Ошибка",
+                                TypeMessage.Information, ButtonEn.Ok);
                             messBox2.ShowDialog();
                             break;
                     }
@@ -95,7 +95,7 @@ namespace PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg
             }
             catch (Exception ex)
             {
-                MessBox messBox = new MessBox(ex.Message, TypeMessage.Error, ButtonEn.Ok);
+                MessBox messBox = new MessBox(ex.Message, "Ошибка", TypeMessage.Error, ButtonEn.Ok);
                 messBox.ShowDialog();
             }
         }

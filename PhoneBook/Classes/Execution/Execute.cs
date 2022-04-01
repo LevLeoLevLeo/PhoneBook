@@ -1,4 +1,5 @@
-﻿using PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg;
+﻿using PhoneBook.Classes.Execution.Support;
+using PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg;
 using PhoneBook.Classes.Execution.Support.CheckBoxDescription.Click.AuthRegPage;
 using PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.RegPage;
 using System;
@@ -88,11 +89,30 @@ namespace PhoneBook.Classes.Execution
         /// </summary>
         /// <param name="passwordBox"></param>
         /// <param name="checkBox"></param>
-        public static void PsbPasswordChangeText(TextBox textBox,PasswordBox passwordBox, CheckBox checkBox)
+        public static void PsbPasswordChangeText(TextBox textBox, PasswordBox passwordBox, CheckBox checkBox)
         {
             ExePsbPasswordChangeText exePsbPasswordChangeText = new ExePsbPasswordChangeText(ref textBox, ref passwordBox,
                 ref checkBox);
             exePsbPasswordChangeText.TextPassChange();
+        }
+
+        /// <summary>
+        /// Отправляет Email с кодом подтверждения на почту.
+        /// </summary>
+        /// <param name="textBoxEmail"></param>
+        /// <param name="textBoxLogin"></param>
+        /// <returns></returns>
+        public static string SendCodeToEmail(TextBox textBoxEmail, TextBox textBoxLogin)
+        {
+            ExeSendEmail exeSendEmail = new ExeSendEmail(ref textBoxEmail, ref textBoxLogin);
+            return exeSendEmail.Send();
+        }
+        public static void Registration(TextBox textBoxLogin, TextBox textBoxEmail, TextBox textBoxPassword,
+            PasswordBox passwordBox, PasswordBox repeatPassworBox)
+        {
+            ExeRegistration exeRegistration = new ExeRegistration(ref textBoxLogin, ref textBoxEmail,
+                ref textBoxPassword, ref passwordBox, ref repeatPassworBox);
+            exeRegistration.Registration();
         }
         #endregion
 

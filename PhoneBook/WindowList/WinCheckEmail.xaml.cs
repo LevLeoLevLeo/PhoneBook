@@ -26,7 +26,7 @@ namespace PhoneBook.WindowList
 
         private void BtnThisClose_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
 
         private void BtnRegistration_Click(object sender, RoutedEventArgs e)

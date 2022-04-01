@@ -69,6 +69,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinAuthReg\ExeAuthorize.cs" />
+    <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinAuthReg\ExeRegistration.cs" />
+    <Compile Include="Classes\Execution\Support\SendEmail\ExeSendEmail.cs" />
     <Compile Include="Classes\Execution\Support\TextPasswordBox\TextPassChange\RegPage\ExePsbPasswordChangeText.cs" />
     <Compile Include="Classes\Support\CurrentUser.cs" />
     <Compile Include="Classes\Support\DataBaseEnt.cs" />

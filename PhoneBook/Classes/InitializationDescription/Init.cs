@@ -1,4 +1,5 @@
 ﻿using PhoneBook.Classes.InitializationDescription.Support;
+using System.Windows;
 using System.Windows.Controls;
 using static PhoneBook.Classes.EnumNameSpace.WinMessageBox.EnumWinMessageBox;
 
@@ -27,11 +28,11 @@ namespace PhoneBook.Classes.InitializationDescription
         /// <param name="ButtonNo"></param>
         /// <param name="ButtonYes"></param>
         /// <param name="ButtonCancel"></param>
-        public static void WinMessageBox(string TextMessage, TextBlock TextBlock,
+        public static void WinMessageBox(Window Window, string TextTitle, string TextMessage, TextBlock TextBlock,
             TypeMessage TypeMessage, ButtonEn ButtonEn, Button ButtonOk,
             Button ButtonNo, Button ButtonYes, Button ButtonCancel)
         {
-            InitWinMessageBox initWinMessageBox = new InitWinMessageBox(ref TextMessage,
+            InitWinMessageBox initWinMessageBox = new InitWinMessageBox(ref Window, ref TextTitle, ref TextMessage,
                 ref TextBlock, ref TypeMessage, ref ButtonEn, ref ButtonOk, ref ButtonNo,
                 ref ButtonYes, ref ButtonCancel);
             initWinMessageBox.Initialization();

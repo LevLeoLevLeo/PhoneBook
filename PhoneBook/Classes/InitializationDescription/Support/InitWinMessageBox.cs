@@ -14,7 +14,9 @@ namespace PhoneBook.Classes.InitializationDescription.Support
     /// </summary>
     class InitWinMessageBox : IInit
     {
+        private Window Window { get; set; }
         private string TextMessage { get; set; }
+        private string TextTitle { get; set; }
         private TextBlock TextBlock { get; set; }
         private TypeMessage TypeMessage { get; set; }
         private ButtonEn ButtonEn { get; set; }
@@ -23,12 +25,14 @@ namespace PhoneBook.Classes.InitializationDescription.Support
         private Button ButtonYes { get; set; }
         private Button ButtonCancel { get; set; }
        
-        public InitWinMessageBox(ref string textMessage, ref TextBlock textBlock,
-            ref TypeMessage typeMessage, ref ButtonEn buttonEn,
+        public InitWinMessageBox(ref Window window, ref string textMessage, ref string textTitle,
+            ref TextBlock textBlock, ref TypeMessage typeMessage, ref ButtonEn buttonEn,
             ref Button buttonOk, ref Button buttonNo,
             ref Button buttonYes, ref Button buttonCancel)
         {
+            Window = window;
             TextMessage = textMessage;
+            TextTitle = textTitle;
             TextBlock = textBlock;
             TypeMessage = typeMessage;
             ButtonEn = buttonEn;
@@ -41,6 +45,7 @@ namespace PhoneBook.Classes.InitializationDescription.Support
         public void Initialization()
         {
             TextBlock.Text = TextMessage;
+            Window.Title = TextTitle;
             switch (TypeMessage)
             {
                 case TypeMessage.Error:
