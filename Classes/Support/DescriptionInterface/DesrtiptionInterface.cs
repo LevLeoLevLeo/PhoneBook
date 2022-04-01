@@ -36,5 +36,16 @@
         {
             bool IsValid();
         }
+
+        /// <summary>
+        /// Интерфейс, описывающий показ пароля.
+        /// </summary>
+        public interface IShowPass
+        {
+            /// <summary>
+            /// Реализует показ пароля.
+            /// </summary>
+            void ShowPass();
+        }
     }
 }

@@ -55,6 +55,7 @@
     <Compile Include="Classes\Support\Placeholder\TxbPlaceholderGotFocus.cs" />
     <Compile Include="Classes\Support\Placeholder\TxbPlaceholderLostFocus.cs" />
     <Compile Include="Classes\Support\Check\TxbNull.cs" />
+    <Compile Include="Classes\Support\ShowPassword\CheckBoxShowPass.cs" />
     <Compile Include="Classes\Support\Validation\PsbRepeatPassword.cs" />
     <Compile Include="Classes\Support\Validation\ValidEmail.cs" />
     <Compile Include="Classes\WPFTextPassBox.cs" />

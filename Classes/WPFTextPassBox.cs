@@ -1,9 +1,8 @@
 ﻿#region Using
-using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media;
 using WPFTextBoxHelp.Classes.Support.Check;
 using WPFTextBoxHelp.Classes.Support.Placeholder;
+using WPFTextBoxHelp.Classes.Support.ShowPassword;
 using WPFTextBoxHelp.Classes.Support.Validation;
 #endregion
 
@@ -90,11 +89,35 @@ namespace WPFTextBoxHelp.Classes
         /// <param name="passwordBox"></param>
         /// <param name="secondPasswordBox"></param>
         /// <returns></returns>
-        public static bool PassboxRepeatPassword(PasswordBox passwordBox, PasswordBox secondPasswordBox)
+        public static bool PassboxRepeatPassword(TextBox textBoxPass, PasswordBox passwordBox,
+            PasswordBox secondPasswordBox)
         {
-            PsbRepeatPassword psbRepeatPassword = new PsbRepeatPassword(ref passwordBox, ref secondPasswordBox);
+            PsbRepeatPassword psbRepeatPassword = new PsbRepeatPassword(ref textBoxPass, ref passwordBox,
+                ref secondPasswordBox);
             return psbRepeatPassword.IsValid();
         }
 
+        /// <summary>
+        /// Показ/скрытие пароля по checkbox'у.
+        /// </summary>
+        /// <param name="checkBoxPass"></param>
+        /// <param name="textBoxPass"></param>
+        /// <param name="passwordBox"></param>
+        public static void CheckBoxShowPassword(CheckBox checkBoxPass, TextBox textBoxPass, PasswordBox passwordBox)
+        {
+            CheckBoxShowPass checkBoxShowPass = new CheckBoxShowPass(ref checkBoxPass,
+                ref textBoxPass, ref passwordBox);
+            checkBoxShowPass.ShowPass();
+        }
+        /// <summary>
+        /// Проверяет почту на валидность.
+        /// </summary>
+        /// <param name="textBox"></param>
+        /// <returns></returns>
+        public static bool CheckValidEmail(TextBox textBox)
+        {
+            ValidEmail validEmail = new ValidEmail(ref textBox);
+            return validEmail.IsValid();
+        }
     }
 }

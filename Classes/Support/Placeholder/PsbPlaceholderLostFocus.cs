@@ -2,7 +2,6 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
-using WPFTextBoxHelp.Classes.Support.Validation;
 using static WPFTextBoxHelp.Classes.Support.DesrtiptionInterface;
 
 namespace WPFTextBoxHelp.Classes.Support.Placeholder
