@@ -59,7 +59,12 @@ namespace PhoneBook.Classes.Execution.Support
                     smtpClient.EnableSsl = true;
                     smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
                     smtpClient.UseDefaultCredentials = false;
-                    smtpClient.Credentials = new NetworkCredential(fromMailAddress.Address, "r6h-Emq-SMH-uCL");
+                    smtpClient.Credentials = new NetworkCredential(
+                        fromMailAddress.Address, "r6h-Emq-SMH-uCL"); //Please don't steal my email password.
+                                                                     //This mail is for my study project
+                                                                     //and there is nothing important on it,
+                                                                     //but it is important for my project.
+                                                                     //Peace to all!))
 
                     smtpClient.Send(mailMessage);
                     return x;
