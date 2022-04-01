@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace PhoneBook.Classes.Execution
@@ -27,7 +28,7 @@ namespace PhoneBook.Classes.Execution
         public static void GoToAuthPage(Button buttonAuth, Button buttonReg)
         {
             ExeGoToAuthPage exeGoToAuthPage = new ExeGoToAuthPage(ref buttonAuth, ref buttonReg);
-            exeGoToAuthPage.GoToPage();
+            exeGoToAuthPage.Click();
         }
         /// <summary>
         /// Переход на страницу регистрации в окне Авторизации/Регистрации.
@@ -37,7 +38,22 @@ namespace PhoneBook.Classes.Execution
         public static void GoToRegPage(Button buttonAuth, Button buttonReg)
         {
             ExeGoToRegPage exeGoToRegPage = new ExeGoToRegPage(ref buttonAuth, ref buttonReg);
-            exeGoToRegPage.GoToPage();
+            exeGoToRegPage.Click();
+        }
+
+        /// <summary>
+        /// Авторизация пользователя в приложении.
+        /// </summary>
+        /// <param name="textBoxLogin"></param>
+        /// <param name="textBoxPass"></param>
+        /// <param name="passwordBox"></param>
+        /// <param name="checkBox"></param>
+        public static void Authorization(TextBox textBoxLogin, TextBox textBoxPass,
+            PasswordBox passwordBox, CheckBox checkBox)
+        {
+            ExeAuthorize exeAuthorize = new ExeAuthorize(ref textBoxLogin, ref textBoxPass,
+                ref passwordBox, ref checkBox);
+            exeAuthorize.Click();
         }
 
         /// <summary>
@@ -52,12 +68,31 @@ namespace PhoneBook.Classes.Execution
                 ref textBox, ref passwordBox);
             exeChckBoxShowPass.ShowPassword();
         }
+        /// <summary>
+        /// Проверка на совпадение повторно введенного пароля при регистриции.
+        /// </summary>
+        /// <param name="textBox"></param>
+        /// <param name="passwordBox"></param>
+        /// <param name="passwordBox1"></param>
+        /// <param name="textBlock"></param>
         public static void RepeatPassword(TextBox textBox, PasswordBox passwordBox,
             PasswordBox passwordBox1, TextBlock textBlock)
         {
             ExePsbRepeatPasswordChange exePsbRepeatPasswordChange = new ExePsbRepeatPasswordChange(ref textBox,
                 ref passwordBox, ref passwordBox1, ref textBlock);
             exePsbRepeatPasswordChange.TextPassChange();
+        }
+
+        /// <summary>
+        /// Логика поведения passwordbpx'а при пустом значении поля.
+        /// </summary>
+        /// <param name="passwordBox"></param>
+        /// <param name="checkBox"></param>
+        public static void PsbPasswordChangeText(TextBox textBox,PasswordBox passwordBox, CheckBox checkBox)
+        {
+            ExePsbPasswordChangeText exePsbPasswordChangeText = new ExePsbPasswordChangeText(ref textBox, ref passwordBox,
+                ref checkBox);
+            exePsbPasswordChangeText.TextPassChange();
         }
         #endregion
 

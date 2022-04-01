@@ -49,29 +49,15 @@ namespace PhoneBook.PageList.PageAuthReg
         }
 
         #endregion
+       
         private void BtnAuthorize_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void PsbPassword_PasswordChanged(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void BtnShowPass_Click(object sender, RoutedEventArgs e)
-        {
-
+            Execute.Authorization(TxbLogin, TxbPassword, PsbPassword, ChbShowPass);
         }
 
         private void ChbShowPass_Click(object sender, RoutedEventArgs e)
         {
             Execute.ShowHidePassword(ChbShowPass, TxbPassword, PsbPassword);
-        }
-
-        private void TxbPassword_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }

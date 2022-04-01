@@ -1,0 +1,24 @@
+﻿<Window x:Class="PhoneBook.WindowList.WinUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PhoneBook.WindowList"
+        mc:Ignorable="d"
+        Title="WinUser" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="41px"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#FFAFBD" Offset="0"/>
+                <GradientStop Color="#FFC3A0" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button Name="BtnClose" Content="Закрыть" Grid.Row="1" HorizontalAlignment="Right"
+                VerticalAlignment="Bottom" Margin="0 0 10 10"/>
+        <Frame Name="FrmWinUser" NavigationUIVisibility="Hidden" Grid.Row="0"/>
+    </Grid>
+</Window>

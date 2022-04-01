@@ -12,14 +12,14 @@ namespace PhoneBook.Classes.Support
     public class DescriptionInterface
     {
         /// <summary>
-        /// Интерфейс, описывающий переход на другую страницу.
+        /// Интерфейс, описывающий событие "click".
         /// </summary>
-        public interface IGoToPage
+        public interface IClick
         {
             /// <summary>
             /// Переход на другую страницу.
             /// </summary>
-            void GoToPage();
+            void Click();
         }
         
         /// <summary>

@@ -12,20 +12,17 @@
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
 
-            <TextBox Name="TxbLogin" Text="Логин или почта..." ToolTip="Поле для ввода логина или почты, которые Вы указали при регистрации."
+            <TextBox Name="TxbLogin" Text="Логин или почта"
                      GotKeyboardFocus="TxbLogin_GotKeyboardFocus" LostKeyboardFocus="TxbLogin_LostKeyboardFocus"/>
            
             <TextBlock Style="{StaticResource TxtNotCorrect}"
                        Name="TxtLoginEmailNotCorrect" Text="Логин или почта введены некорректно"/>
             
-            <TextBox Name="TxbPassword" Text="Пароль..." Margin="0 10 0 0"
-                     ToolTip="Поле для ввода пароля от Вашего аккаунта."
+            <TextBox Name="TxbPassword" Text="Пароль" Margin="0 10 0 0"
                      GotKeyboardFocus="TxbPassword_GotKeyboardFocus"
-                     LostKeyboardFocus="TxbPassword_LostKeyboardFocus"
-                     TextChanged="TxbPassword_TextChanged"/>
+                     LostKeyboardFocus="TxbPassword_LostKeyboardFocus"/>
 
-            <PasswordBox Name="PsbPassword" Margin="0 10 0 0" ToolTip="Поле для ввода пароля от Вашего аккаунта."
-                         PasswordChanged="PsbPassword_PasswordChanged"
+            <PasswordBox Name="PsbPassword" Margin="0 10 0 0"
                          GotKeyboardFocus="TxbPassword_GotKeyboardFocus"
                          LostKeyboardFocus="TxbPassword_LostKeyboardFocus"/>
 

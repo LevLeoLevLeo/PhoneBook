@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("database/model.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("database/model.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("libraryadd/wpftextboxhelp.dll")]
 
 
