@@ -59,5 +59,15 @@ namespace PhoneBook.PageList.PageUser
         {
             Execute.CmbChangePhoneList(CmbPhoneList, DtGrTelephoneInfo);
         }
+
+        private void BtnNewPhoneList_Click(object sender, RoutedEventArgs e)
+        {
+            Execute.CreateNewList(CmbPhoneList);
+        }
+
+        private void BtnDeletePhoneList_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

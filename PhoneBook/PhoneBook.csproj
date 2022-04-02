@@ -87,9 +87,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\Execution\Support\ButtonDescription\Click\PageUserMain\ExeBtnClickAddPhoneList.cs" />
     <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinAuthReg\ExeAuthorize.cs" />
     <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinAuthReg\ExeRegistration.cs" />
     <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinAuthReg\ExeVerifyEmail.cs" />
+    <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinDialog\ExeBtnClickCreateNewPhoneList.cs" />
+    <Compile Include="Classes\Execution\Support\ComboBoxDescription\SelectionChange\PageMainUser\ExeCmbPhoneListChange.cs" />
     <Compile Include="Classes\Execution\Support\SendEmail\ExeSendEmail.cs" />
     <Compile Include="Classes\Execution\Support\TextPasswordBox\TextPassChange\AuthRegPage\ExePsbPasswordChangeText.cs" />
     <Compile Include="Classes\Execution\Support\TextPasswordBox\TextPassChange\AuthRegPage\ExeTxbEmailTextChange.cs" />
@@ -133,6 +136,12 @@
     <Compile Include="PageList\PageUser\PageUserMain.xaml.cs">
       <DependentUpon>PageUserMain.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowList\WinAddList.xaml.cs">
+      <DependentUpon>WinAddList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowList\WinAddPhone.xaml.cs">
+      <DependentUpon>WinAddPhone.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WindowList\WinCheckEmail.xaml.cs">
       <DependentUpon>WinCheckEmail.xaml</DependentUpon>
     </Compile>
@@ -174,6 +183,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="PageList\PageUser\PageUserMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowList\WinAddList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowList\WinAddPhone.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -261,5 +278,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

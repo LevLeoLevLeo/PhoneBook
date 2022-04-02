@@ -1,5 +1,7 @@
 ﻿using PhoneBook.Classes.Execution.Support;
+using PhoneBook.Classes.Execution.Support.ButtonDescription.Click.PageUserMain;
 using PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg;
+using PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinDialog;
 using PhoneBook.Classes.Execution.Support.ComboBoxDescription.SelectionChange.PageMainUser;
 using PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.AuthRegPage;
 using PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.CheckCodeEmail;
@@ -175,6 +177,17 @@ namespace PhoneBook.Classes.Execution
             exeCmbPhoneListChang.Change();
         }
 
+        public static void CreateNewList(ComboBox comboBox)
+        {
+            ExeBtnClickAddPhoneList exeBtnClickAddPhoneList = new ExeBtnClickAddPhoneList(ref comboBox);
+            exeBtnClickAddPhoneList.AddPhoneList();
+        }
+        public static void CreateNewPhoneList(Window window, TextBox textBox)
+        {
+            ExeBtnClickCreateNewPhoneList exeBtnClickCreateNewPhoneList = new ExeBtnClickCreateNewPhoneList(
+                ref textBox, ref window);
+            exeBtnClickCreateNewPhoneList.Click();
+        }
         #endregion
 
     }

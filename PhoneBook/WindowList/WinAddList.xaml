@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PhoneBook.WindowList"
         mc:Ignorable="d"
-        Title="WinAddList" Height="450" Width="800">
+        Title="Добавление нового списка" Height="200" Width="400" ResizeMode="NoResize">
     <Grid>
-        
+
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#FFAFBD" Offset="0"/>
+                <GradientStop Color="#FFC3A0" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <TextBox Name="TxbNewPhoneList" HorizontalAlignment="Center" VerticalAlignment="Center"
+                 Foreground="Gray" GotKeyboardFocus="TxbNewPhoneList_GotKeyboardFocus"
+                 LostKeyboardFocus="TxbNewPhoneList_LostKeyboardFocus"/>
+        <StackPanel Orientation="Horizontal" Margin="0 0 10 10" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+
+            <Button Name="BtnCreateNewPhone" Content="Создать" Margin="0 0 10 0" Click="BtnCreateNewPhone_Click"/>
+            <Button Name="BtnCancel" Content="Отмена" Click="BtnCancel_Click"/>
+
+        </StackPanel>
     </Grid>
 </Window>

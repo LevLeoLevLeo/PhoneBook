@@ -86,3 +86,7 @@ C:\Users\LevLe\Desktop\Курсач\PhoneBook\PhoneBook\bin\Debug\EntityFramewor
 C:\Users\LevLe\Desktop\Курсач\PhoneBook\PhoneBook\bin\Debug\EntityFramework.xml
 C:\Users\LevLe\Desktop\Курсач\PhoneBook\PhoneBook\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\LevLe\Desktop\Курсач\PhoneBook\PhoneBook\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\LevLe\Desktop\Курсач\PhoneBook\PhoneBook\obj\Debug\WindowList\WinAddList.g.cs
+C:\Users\LevLe\Desktop\Курсач\PhoneBook\PhoneBook\obj\Debug\WindowList\WinAddPhone.g.cs
+C:\Users\LevLe\Desktop\Курсач\PhoneBook\PhoneBook\obj\Debug\WindowList\WinAddList.baml
+C:\Users\LevLe\Desktop\Курсач\PhoneBook\PhoneBook\obj\Debug\WindowList\WinAddPhone.baml
