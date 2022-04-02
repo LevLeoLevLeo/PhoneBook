@@ -52,12 +52,22 @@ namespace PhoneBook.PageList.PageAuthReg
        
         private void BtnAuthorize_Click(object sender, RoutedEventArgs e)
         {
-            Execute.Authorization(TxbLogin, TxbPassword, PsbPassword, ChbShowPass);
+            Execute.Authorization(TxbLogin, PsbPassword);
         }
 
-        private void ChbShowPass_Click(object sender, RoutedEventArgs e)
+        private void BtnShowPass_Click(object sender, RoutedEventArgs e)
         {
-            Execute.ShowHidePassword(ChbShowPass, TxbPassword, PsbPassword);
+            WPFTextPassBox.ShowPassword(TxbPassword, PsbPassword);
+        }
+
+        private void BtnShowPass_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            WPFTextPassBox.HidePassword(TxbPassword, PsbPassword);
+        }
+
+        private void PsbPassword_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            Execute.PsbPasswordChangeText(PsbPassword, BtnShowPass);
         }
     }
 }

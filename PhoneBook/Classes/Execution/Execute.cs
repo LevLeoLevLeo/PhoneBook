@@ -1,6 +1,5 @@
 ﻿using PhoneBook.Classes.Execution.Support;
 using PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg;
-using PhoneBook.Classes.Execution.Support.CheckBoxDescription.Click.AuthRegPage;
 using PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.RegPage;
 using System.Windows;
 using System.Windows.Controls;
@@ -44,26 +43,12 @@ namespace PhoneBook.Classes.Execution
         /// <param name="textBoxPass"></param>
         /// <param name="passwordBox"></param>
         /// <param name="checkBox"></param>
-        public static void Authorization(TextBox textBoxLogin, TextBox textBoxPass,
-            PasswordBox passwordBox, CheckBox checkBox)
+        public static void Authorization(TextBox textBoxLogin, PasswordBox passwordBox)
         {
-            ExeAuthorize exeAuthorize = new ExeAuthorize(ref textBoxLogin, ref textBoxPass,
-                ref passwordBox, ref checkBox);
+            ExeAuthorize exeAuthorize = new ExeAuthorize(ref textBoxLogin, ref passwordBox);
             exeAuthorize.Click();
         }
 
-        /// <summary>
-        /// Скрытие/показ пароля по нажатию на checkbox.
-        /// </summary>
-        /// <param name="checkBox"></param>
-        /// <param name="textBox"></param>
-        /// <param name="passwordBox"></param>
-        public static void ShowHidePassword(CheckBox checkBox, TextBox textBox, PasswordBox passwordBox)
-        {
-            ExeChckBoxShowPass exeChckBoxShowPass = new ExeChckBoxShowPass(ref checkBox,
-                ref textBox, ref passwordBox);
-            exeChckBoxShowPass.ShowPassword();
-        }
         /// <summary>
         /// Проверка на совпадение повторно введенного пароля при регистриции.
         /// </summary>
@@ -84,10 +69,10 @@ namespace PhoneBook.Classes.Execution
         /// </summary>
         /// <param name="passwordBox"></param>
         /// <param name="checkBox"></param>
-        public static void PsbPasswordChangeText(TextBox textBox, PasswordBox passwordBox, CheckBox checkBox)
+        public static void PsbPasswordChangeText(PasswordBox passwordBox, Button button)
         {
-            ExePsbPasswordChangeText exePsbPasswordChangeText = new ExePsbPasswordChangeText(ref textBox, ref passwordBox,
-                ref checkBox);
+            ExePsbPasswordChangeText exePsbPasswordChangeText = new ExePsbPasswordChangeText(ref passwordBox,
+                ref button);
             exePsbPasswordChangeText.TextPassChange();
         }
 

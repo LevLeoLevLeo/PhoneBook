@@ -89,7 +89,7 @@ namespace PhoneBook.PageList.PageAuthReg
 
         private void ChbShowPass_Click(object sender, RoutedEventArgs e)
         {
-            Execute.ShowHidePassword(ChbShowPass, TxbNewPassword, PsbNewPassword);
+            
         }
 
         private void PsbRepeatNewPassword_PasswordChanged(object sender, RoutedEventArgs e)

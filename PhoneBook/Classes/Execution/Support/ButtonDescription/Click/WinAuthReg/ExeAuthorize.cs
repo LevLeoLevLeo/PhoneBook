@@ -13,24 +13,18 @@ namespace PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg
     public class ExeAuthorize : IClick
     { 
         private TextBox TextBoxLogin { get; set; }
-        private TextBox TextBoxPass { get; set; }
         private PasswordBox PasswordBox { get; set; }
-        private CheckBox CheckBox { get; set; }
-        public ExeAuthorize (ref TextBox textBoxLogin, ref TextBox textBoxPass,
-            ref PasswordBox passwordBox, ref CheckBox checkBox)
+        public ExeAuthorize (ref TextBox textBoxLogin, ref PasswordBox passwordBox)
         {
             TextBoxLogin = textBoxLogin;
-            TextBoxPass = textBoxPass;
             PasswordBox = passwordBox;
-            CheckBox = checkBox;
         }
 
         public void Click()
         {
             try
             {
-                if (WPFTextPassBox.TextBoxIsNull(TextBoxLogin) || WPFTextPassBox.TextBoxIsNull(TextBoxPass) ||
-                    WPFTextPassBox.PassBoxIsNull(PasswordBox))
+                if (WPFTextPassBox.TextBoxIsNull(TextBoxLogin) || WPFTextPassBox.PassBoxIsNull(PasswordBox))
                 {
                     MessBox messBox = new MessBox("Вы заполнили не все поля!", "Авторизация", TypeMessage.Warning,
                         ButtonEn.Ok);
@@ -39,53 +33,22 @@ namespace PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg
                 
                 else
                 {
-                    switch (CheckBox.IsChecked)
+                    var UserLogIn = DataBaseEnt.TelephoneBookEntities.User.FirstOrDefault(Alien =>
+                            Alien.Login == TextBoxLogin.Text && Alien.Password == PasswordBox.Password);
+
+                    if (UserLogIn != null)
                     {
-                        case true:
-                            var UserLogIn = DataBaseEnt.TelephoneBookEntities.User.FirstOrDefault(Alien =>
-                            Alien.Login == TextBoxLogin.Text && Alien.Password == TextBoxPass.Text ||
-                            Alien.Email == TextBoxLogin.Text && Alien.Password == TextBoxPass.Text);
-
-                            if (UserLogIn != null)
-                            {
-                                CurrentUser.currentUser = UserLogIn;
-                                WinUser winUser = new WinUser();
-                                winUser.Show();
-                                WindowTransfer.window.Close();
-                            }
-                            else
-                            {
-                                MessBox messBox = new MessBox("Логин или пароль введены неверно!", "Авторизация",
+                        CurrentUser.currentUser = UserLogIn;
+                        WinUser winUser = new WinUser();
+                        winUser.Show();
+                        WindowTransfer.window.Close();
+                    }
+                    else
+                    {
+                        MessBox messBox = new MessBox("Логин или пароль введены неверно!", "Авторизация",
                                     TypeMessage.Warning, ButtonEn.Ok);
-                                messBox.ShowDialog();
-                                PasswordBox.Password = null;
-                            }
-                            break;
-                        case false:
-                            var UserLogInT = DataBaseEnt.TelephoneBookEntities.User.FirstOrDefault(Alien =>
-                             Alien.Login == TextBoxLogin.Text && Alien.Password == PasswordBox.Password ||
-                             Alien.Email == TextBoxLogin.Text && Alien.Password == PasswordBox.Password);
-
-                            if (UserLogInT != null)
-                            {
-                                CurrentUser.currentUser = UserLogInT;
-                                WinUser winUser = new WinUser();
-                                winUser.Show();
-                                WindowTransfer.window.Close();
-                            }
-                            else
-                            {
-                                MessBox messBox = new MessBox("Такого пользователя!", "Авторизация",
-                                    TypeMessage.Information, ButtonEn.Ok);
-                                messBox.ShowDialog();
-                                PasswordBox.Password = null;
-                            }
-                            break;
-                        default:
-                            MessBox messBox2 = new MessBox("Произошла непредвиденная ошибка. Попробуйте еще раз, или повторите попытку позже.", "Ошибка",
-                                TypeMessage.Information, ButtonEn.Ok);
-                            messBox2.ShowDialog();
-                            break;
+                        messBox.ShowDialog();
+                        PasswordBox.Password = null;
                     }
                 }
             }

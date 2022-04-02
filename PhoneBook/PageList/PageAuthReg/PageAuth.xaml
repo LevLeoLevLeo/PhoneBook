@@ -24,12 +24,15 @@
 
             <PasswordBox Name="PsbPassword" Margin="0 10 0 0"
                          GotKeyboardFocus="TxbPassword_GotKeyboardFocus"
-                         LostKeyboardFocus="TxbPassword_LostKeyboardFocus"/>
+                         LostKeyboardFocus="TxbPassword_LostKeyboardFocus"
+                         PasswordChanged="PsbPassword_PasswordChanged"/>
 
-            <CheckBox Name="ChbShowPass" HorizontalAlignment="Right" Margin="0 -33 -135 0"
-                      HorizontalContentAlignment="Center" VerticalAlignment="Center"
-                      FontFamily="Roboto" Padding="3 -0.5 0 0" FontSize="14"
-                      Content="Показать пароль" Click="ChbShowPass_Click"/>
+            <Button Name="BtnShowPass" HorizontalAlignment="Right" Margin="0 -33 -135 0"
+                    HorizontalContentAlignment="Center" VerticalAlignment="Center"
+                    FontFamily="Roboto" Padding="3 -0.5 0 0" FontSize="14"
+                    Content="Показать пароль" Click="BtnShowPass_Click"
+                    ClickMode="Press" PreviewMouseLeftButtonUp="BtnShowPass_PreviewMouseLeftButtonUp"
+                    Width="130px" Visibility="Collapsed"/>
 
             <TextBlock Style="{StaticResource TxtNotCorrect}"
                        Name="TxtPasswordNotCorrect" Text="Пароль введен некорректно"/>

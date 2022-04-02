@@ -16,26 +16,19 @@ namespace PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.Reg
     /// </summary>
     public class ExePsbPasswordChangeText : ITextPassChange
     {
-        private TextBox TextBox { get; set; }
         private PasswordBox PasswordBox { get; set; }
-        private CheckBox CheckBox { get; set; }
-        public ExePsbPasswordChangeText(ref TextBox textBox, ref PasswordBox passwordBox, ref CheckBox checkBox)
+        private Button Button { get; set; }
+        public ExePsbPasswordChangeText(ref PasswordBox passwordBox, ref Button button)
         {
-            TextBox = textBox;
             PasswordBox = passwordBox;
-            CheckBox = checkBox;
+            Button = button;
         }
 
         public void TextPassChange()
         {
-            if (WPFTextPassBox.PassBoxIsNull(PasswordBox) == true ||
-                WPFTextPassBox.TextBoxIsNull(TextBox) == true)
-            {
-                CheckBox.IsChecked = false;
-                WPFTextPassBox.CheckBoxShowPassword(CheckBox, TextBox, PasswordBox);
-                CheckBox.Visibility = Visibility.Collapsed;
-            }
-            else CheckBox.Visibility = Visibility.Visible;
+            if (!WPFTextPassBox.PassBoxIsNull(PasswordBox))
+                Button.Visibility = Visibility.Visible;
+            else Button.Visibility = Visibility.Collapsed;
         }
     }
 }
