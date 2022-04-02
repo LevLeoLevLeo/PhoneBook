@@ -14,6 +14,21 @@
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +48,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Asset\AppIcon\IconAppIco.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -73,7 +91,8 @@
     <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinAuthReg\ExeRegistration.cs" />
     <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinAuthReg\ExeVerifyEmail.cs" />
     <Compile Include="Classes\Execution\Support\SendEmail\ExeSendEmail.cs" />
-    <Compile Include="Classes\Execution\Support\TextPasswordBox\TextPassChange\RegPage\ExePsbPasswordChangeText.cs" />
+    <Compile Include="Classes\Execution\Support\TextPasswordBox\TextPassChange\AuthRegPage\ExePsbPasswordChangeText.cs" />
+    <Compile Include="Classes\Execution\Support\TextPasswordBox\TextPassChange\AuthRegPage\ExeTxbLoginTextChange.cs" />
     <Compile Include="Classes\Support\CurrentUser.cs" />
     <Compile Include="Classes\Support\DataBaseEnt.cs" />
     <Compile Include="Classes\Support\WindowTransfer.cs" />
@@ -128,7 +147,7 @@
     <Compile Include="Classes\Execution\Execute.cs" />
     <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinAuthReg\ExeGoToAuthPage.cs" />
     <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinAuthReg\ExeGoToRegPage.cs" />
-    <Compile Include="Classes\Execution\Support\TextPasswordBox\TextPassChange\RegPage\ExePsbRepeatPasswordChange.cs" />
+    <Compile Include="Classes\Execution\Support\TextPasswordBox\TextPassChange\AuthRegPage\ExePsbRepeatPasswordChange.cs" />
     <Compile Include="Classes\InitializationDescription\Init.cs" />
     <Compile Include="Classes\InitializationDescription\Support\InitWinAuthReg.cs" />
     <Compile Include="Classes\InitializationDescription\Support\InitWinMessageBox.cs" />
@@ -204,9 +223,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Asset\" />
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Asset\MessBox\Error.png" />
+    <Resource Include="Asset\MessBox\Info.png" />
+    <Resource Include="Asset\MessBox\Warning.png" />
+    <Resource Include="Asset\WinUser\Add.png" />
+    <Resource Include="Asset\WinUser\Trash.png" />
+    <Resource Include="Asset\AppIcon\IconApp.png" />
+    <Resource Include="Asset\AppIcon\IconAppIco.ico" />
     <Content Include="DataBase\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model.Context.cs</LastGenOutput>

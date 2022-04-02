@@ -1,5 +1,6 @@
 ﻿using PhoneBook.Classes.Execution.Support;
 using PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg;
+using PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.AuthRegPage;
 using PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.RegPage;
 using System.Windows;
 using System.Windows.Controls;
@@ -103,7 +104,7 @@ namespace PhoneBook.Classes.Execution
             exeRegistration.Click();
         }
         /// <summary>
-        /// Отправка Email с кодом для подтверждения.
+        /// Проверка кода для подтверждения регистрации.
         /// </summary>
         /// <param name="window"></param>
         /// <param name="code"></param>
@@ -112,6 +113,11 @@ namespace PhoneBook.Classes.Execution
         {
             ExeVerifyEmail exeVerifyEmail = new ExeVerifyEmail(ref window, ref code, ref textBox);
             exeVerifyEmail.Click();
+        }
+        public static void NotCorrectMessage(string text, TextBox textBox, TextBlock textBlock, Button button)
+        {
+            ExeTxbLoginTextChange exeTxbLoginTextChange = new ExeTxbLoginTextChange(ref text, ref textBox, ref textBlock, ref button);
+            exeTxbLoginTextChange.TextPassChange();
         }
         #endregion
 

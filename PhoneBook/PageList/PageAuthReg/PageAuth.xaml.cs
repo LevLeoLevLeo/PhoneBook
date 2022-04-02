@@ -14,6 +14,7 @@ namespace PhoneBook.PageList.PageAuthReg
         public PageAuth()
         {
             InitializeComponent();
+            TxbLogin.Text = "Логин или почта";
         }
 
         #region Placeholder
@@ -58,6 +59,11 @@ namespace PhoneBook.PageList.PageAuthReg
         private void BtnAuthorize_Click(object sender, RoutedEventArgs e)
         {
             Execute.Authorization(TxbLogin, PsbPassword);
+        }
+
+        private void TxbLogin_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Execute.NotCorrectMessage("Пользователя с таким логином/почтой нет", TxbLogin, TxtLoginEmailNotCorrect, BtnAuthorize);
         }
     }
 }

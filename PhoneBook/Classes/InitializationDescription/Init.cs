@@ -30,11 +30,11 @@ namespace PhoneBook.Classes.InitializationDescription
         /// <param name="ButtonCancel"></param>
         public static void WinMessageBox(Window Window, string TextMessage, string TextTitle, TextBlock TextBlock,
             TypeMessage TypeMessage, ButtonEn ButtonEn, Button ButtonOk,
-            Button ButtonNo, Button ButtonYes, Button ButtonCancel)
+            Button ButtonNo, Button ButtonYes, Button ButtonCancel, ref Image image)
         {
             InitWinMessageBox initWinMessageBox = new InitWinMessageBox(ref Window, ref TextMessage, ref TextTitle,
                 ref TextBlock, ref TypeMessage, ref ButtonEn, ref ButtonOk, ref ButtonNo,
-                ref ButtonYes, ref ButtonCancel);
+                ref ButtonYes, ref ButtonCancel, ref image);
             initWinMessageBox.Initialization();
         }
     }

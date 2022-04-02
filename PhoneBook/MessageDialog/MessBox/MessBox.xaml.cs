@@ -14,7 +14,7 @@ namespace PhoneBook.MessageDialog.MessBox
         {
             InitializeComponent();
             Init.WinMessageBox(this, textMessage, textTitle, TxtMessage,
-                typeMessage, buttons, BtnOk, BtnNo, BtnYes, BtnCancel);
+                typeMessage, buttons, BtnOk, BtnNo, BtnYes, BtnCancel, ref ImgMessBox);
         }
 
         private void BtnOk_Click(object sender, RoutedEventArgs e)

@@ -45,11 +45,12 @@
 
         </StackPanel>
 
+        <Image Name="ImgMessBox" Grid.Row="0" Grid.Column="1" Width="40" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10 20 0 0"/>
+
         <TextBlock Name="TxtMessage" Style="{StaticResource TxtMain}"
                    TextWrapping="Wrap" Grid.Column="1" Grid.Row="0" MaxWidth="330"
                    HorizontalAlignment="Center" VerticalAlignment="Top"
-                   Margin="60 30 20 0"
-                   Text=""/>
+                   Margin="60 30 20 0"/>
 
     </Grid>
 </Window>
