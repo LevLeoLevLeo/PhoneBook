@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PhoneBook.Classes.Execution;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,11 +20,12 @@ namespace PhoneBook.WindowList
     /// </summary>
     public partial class WinCheckEmail : Window
     {
-        public WinCheckEmail()
+        public WinCheckEmail(TextBox textBoxEmail, TextBox textBoxLogin)
         {
             InitializeComponent();
+            x = Execute.SendCodeToEmail(textBoxEmail, textBoxLogin);
         }
-
+        private static string x;
         private void BtnThisClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -31,7 +33,7 @@ namespace PhoneBook.WindowList
 
         private void BtnRegistration_Click(object sender, RoutedEventArgs e)
         {
-
+            Execute.VerifyEmail(this, x, TxbCheckCode);
         }
     }
 }

@@ -46,6 +46,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -70,6 +71,7 @@
     </ApplicationDefinition>
     <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinAuthReg\ExeAuthorize.cs" />
     <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinAuthReg\ExeRegistration.cs" />
+    <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinAuthReg\ExeVerifyEmail.cs" />
     <Compile Include="Classes\Execution\Support\SendEmail\ExeSendEmail.cs" />
     <Compile Include="Classes\Execution\Support\TextPasswordBox\TextPassChange\RegPage\ExePsbPasswordChangeText.cs" />
     <Compile Include="Classes\Support\CurrentUser.cs" />
@@ -94,9 +96,6 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="DataBase\PhoneNumber.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataBase\Role.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="DataBase\sysdiagrams.cs">

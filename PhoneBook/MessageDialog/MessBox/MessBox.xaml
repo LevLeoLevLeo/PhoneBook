@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:PhoneBook.MessageDialog.MessBox"
         mc:Ignorable="d"
         Title="MessBox" Name="WinMessageBox" Height="250" Width="400" MaxWidth="415"
-        ShowInTaskbar="False" ResizeMode="NoResize" SizeToContent="WidthAndHeight">
+        ShowInTaskbar="False" ResizeMode="NoResize" SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterOwner">
     <Grid>
 
         <Grid.ColumnDefinitions>

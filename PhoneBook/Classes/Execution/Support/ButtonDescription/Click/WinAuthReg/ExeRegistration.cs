@@ -3,13 +3,15 @@ using PhoneBook.DataBase;
 using PhoneBook.MessageDialog.MessBox;
 using PhoneBook.WindowList;
 using System;
+using System.Linq;
 using System.Windows.Controls;
 using WPFTextBoxHelp.Classes;
 using static PhoneBook.Classes.EnumNameSpace.WinMessageBox.EnumWinMessageBox;
+using static PhoneBook.Classes.Support.DescriptionInterface;
 
 namespace PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg
 {
-    public class ExeRegistration
+    public class ExeRegistration : IClick
     {
 
         private TextBox TxbLogin { get; set; }
@@ -30,60 +32,70 @@ namespace PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg
 
         }
 
-        public void Registration()
+        public void Click()
         {
 
-            if (WPFTextPassBox.TextBoxIsNull(TxbLogin) && WPFTextPassBox.CheckValidEmail(TxbEmail) &&
-                WPFTextPassBox.TextBoxIsNull(TxbEmail) &&
-                WPFTextPassBox.PassBoxIsNull(PsbPassword) &&
+            if (!WPFTextPassBox.TextBoxIsNull(TxbLogin) &&
+                !WPFTextPassBox.TextBoxIsNull(TxbEmail) &&
+                !WPFTextPassBox.PassBoxIsNull(PsbPassword) &&
                 WPFTextPassBox.PassboxRepeatPassword(TextBoxPassword, PsbPassword, PsbRepeatPassword))
             {
-                WinCheckEmail winCheckEmail = new WinCheckEmail();
-                if (winCheckEmail.ShowDialog() == true)
+                var user = DataBaseEnt.TelephoneBookEntities.User.FirstOrDefault(x => TxbLogin.Text == x.Login ||
+                TxbEmail.Text == x.Email);
+                if (user == null)
                 {
-                    try
+                    WinCheckEmail winCheckEmail = new WinCheckEmail(TxbEmail, TxbLogin);
+                    if (winCheckEmail.ShowDialog() == true)
                     {
-                        User user = new User
+                        try
                         {
+                            User newUser = new User
+                            {
 
-                            Email = TxbEmail.Text,
-                            Login = TxbLogin.Text,
-                            Password = PsbPassword.Password,
+                                Email = TxbEmail.Text,
+                                Login = TxbLogin.Text,
+                                Password = PsbPassword.Password,
 
-                        };
+                            };
 
-                        DataBaseEnt.TelephoneBookEntities.User.Add(user);
-                        PhoneList phoneList = new PhoneList()
+                            DataBaseEnt.TelephoneBookEntities.User.Add(newUser);
+                            PhoneList phoneList = new PhoneList()
+                            {
+
+                                Name = "Мой список",
+                                IdUser = newUser.Id,
+
+                            };
+
+                            DataBaseEnt.TelephoneBookEntities.PhoneList.Add(phoneList);
+                            DataBaseEnt.TelephoneBookEntities.SaveChanges();
+                            MessBox messBox = new MessBox("Вы зарегестрированы!", "Регистрация", TypeMessage.Information,
+                                ButtonEn.Ok);
+                            messBox.ShowDialog();
+                            TxbLogin.Text = "";
+                            TxbEmail.Text = "";
+                            PsbPassword.Password = "";
+                            PsbRepeatPassword.Password = "";
+                        }
+
+                        catch (Exception ex)
+
                         {
-
-                            Name = "Мой список",
-                            IdUser = user.Id,
-
-                        };
-
-                        DataBaseEnt.TelephoneBookEntities.PhoneList.Add(phoneList);
-                        DataBaseEnt.TelephoneBookEntities.SaveChanges();
-                        MessBox messBox = new MessBox("Вы зарегестрированы!", "Регистрация", TypeMessage.Information,
-                            ButtonEn.Ok);
-                        messBox.ShowDialog();
-                        TxbLogin.Text = "";
-                        TxbEmail.Text = "";
-                        PsbPassword.Password = "";
-                        PsbRepeatPassword.Password = "";
+                            MessBox messBox = new MessBox(ex.Message, "Ошибка", TypeMessage.Error,
+                                ButtonEn.Ok);
+                            messBox.ShowDialog();
+                        }
                     }
-
-                    catch (Exception ex)
-
+                    else
                     {
-                        MessBox messBox = new MessBox(ex.Message, "Ошибка", TypeMessage.Error,
-                            ButtonEn.Ok);
+                        MessBox messBox = new MessBox("Вы отменили регистрацию!", "Регистрация", TypeMessage.Information,
+                              ButtonEn.Ok);
                         messBox.ShowDialog();
                     }
                 }
                 else
                 {
-                    MessBox messBox = new MessBox("Вы отменили регистрацию!", "Регистрация", TypeMessage.Information,
-                          ButtonEn.Ok);
+                    MessBox messBox = new MessBox("Такой пользователь уже есть!", "Регистрация", TypeMessage.Warning, ButtonEn.Ok);
                     messBox.ShowDialog();
                 }
             }

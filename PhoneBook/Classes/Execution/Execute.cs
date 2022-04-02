@@ -2,11 +2,6 @@
 using PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg;
 using PhoneBook.Classes.Execution.Support.CheckBoxDescription.Click.AuthRegPage;
 using PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.RegPage;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -107,12 +102,31 @@ namespace PhoneBook.Classes.Execution
             ExeSendEmail exeSendEmail = new ExeSendEmail(ref textBoxEmail, ref textBoxLogin);
             return exeSendEmail.Send();
         }
+        /// <summary>
+        /// Регистрация в приложении.
+        /// </summary>
+        /// <param name="textBoxLogin"></param>
+        /// <param name="textBoxEmail"></param>
+        /// <param name="textBoxPassword"></param>
+        /// <param name="passwordBox"></param>
+        /// <param name="repeatPassworBox"></param>
         public static void Registration(TextBox textBoxLogin, TextBox textBoxEmail, TextBox textBoxPassword,
             PasswordBox passwordBox, PasswordBox repeatPassworBox)
         {
             ExeRegistration exeRegistration = new ExeRegistration(ref textBoxLogin, ref textBoxEmail,
                 ref textBoxPassword, ref passwordBox, ref repeatPassworBox);
-            exeRegistration.Registration();
+            exeRegistration.Click();
+        }
+        /// <summary>
+        /// Отправка Email с кодом для подтверждения.
+        /// </summary>
+        /// <param name="window"></param>
+        /// <param name="code"></param>
+        /// <param name="textBox"></param>
+        public static void VerifyEmail(Window window, string code, TextBox textBox)
+        {
+            ExeVerifyEmail exeVerifyEmail = new ExeVerifyEmail(ref window, ref code, ref textBox);
+            exeVerifyEmail.Click();
         }
         #endregion
 

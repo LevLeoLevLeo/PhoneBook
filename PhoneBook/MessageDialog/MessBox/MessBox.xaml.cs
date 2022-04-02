@@ -10,10 +10,10 @@ namespace PhoneBook.MessageDialog.MessBox
     /// </summary>
     public partial class MessBox : Window
     {
-        public MessBox(String textTitle, String textMessage, TypeMessage typeMessage, ButtonEn buttons)
+        public MessBox(String textMessage, String textTitle, TypeMessage typeMessage, ButtonEn buttons)
         {
             InitializeComponent();
-            Init.WinMessageBox(this, textTitle, textMessage, TxtMessage,
+            Init.WinMessageBox(this, textMessage, textTitle, TxtMessage,
                 typeMessage, buttons, BtnOk, BtnNo, BtnYes, BtnCancel);
         }
 

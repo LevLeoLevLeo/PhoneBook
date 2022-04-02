@@ -70,7 +70,6 @@ namespace PhoneBook.Classes.Execution.Support
                     return x;
                 }
             }
-
             catch (Exception ex)
             {
                 return ex.Message;

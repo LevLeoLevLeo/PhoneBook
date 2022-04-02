@@ -65,7 +65,7 @@ namespace PhoneBook.PageList.PageAuthReg
 
         private void BtnRegistration_Click(object sender, RoutedEventArgs e)
         {
-
+            Execute.Registration(TxbNewLogin, TxbNewEmail, TxbNewPassword, PsbNewPassword, PsbRepeatNewPassword);
         }
 
         #region Предупреждения
