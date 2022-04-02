@@ -28,10 +28,10 @@
                          PasswordChanged="PsbPassword_PasswordChanged"/>
 
             <Button Name="BtnShowPass" HorizontalAlignment="Right" Margin="0 -33 -135 0"
-                    HorizontalContentAlignment="Center" VerticalAlignment="Center"
-                    FontFamily="Roboto" Padding="3 -0.5 0 0" FontSize="14"
-                    Content="Показать пароль" Click="BtnShowPass_Click"
-                    ClickMode="Press" PreviewMouseLeftButtonUp="BtnShowPass_PreviewMouseLeftButtonUp"
+                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                    VerticalAlignment="Center" Content="Показать пароль"
+                    Click="BtnShowPass_Click" ClickMode="Press"
+                    PreviewMouseLeftButtonUp="BtnShowPass_PreviewMouseLeftButtonUp"
                     Width="130px" Visibility="Collapsed"/>
 
             <TextBlock Style="{StaticResource TxtNotCorrect}"

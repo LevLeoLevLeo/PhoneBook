@@ -72,29 +72,31 @@ namespace PhoneBook.PageList.PageAuthReg
         
         private void TxbNewEmail_TextChanged(object sender, TextChangedEventArgs e)
         {
-            
-        }
-
-        #endregion
-
-        private void PsbNewPassword_PasswordChanged(object sender, RoutedEventArgs e)
-        {
            
         }
 
-        private void TxbNewPassword_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void ChbShowPass_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
+        #endregion
 
         private void PsbRepeatNewPassword_PasswordChanged(object sender, RoutedEventArgs e)
         {
             Execute.RepeatPassword(TxbRepeatNewPassword, PsbNewPassword, PsbRepeatNewPassword, TxtPasswordNotMatch);
         }
+
+        #region ShowPass
+        private void PsbNewPassword_PasswordChanged(object sender, RoutedEventArgs e)
+        {
+            Execute.PsbPasswordChangeText(PsbNewPassword, BtnShowPass);
+        }
+        
+        private void BtnShowPass_PreviewMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            WPFTextPassBox.HidePassword(TxbNewPassword, PsbNewPassword);
+        }
+
+        private void BtnShowPass_Click(object sender, RoutedEventArgs e)
+        {
+            WPFTextPassBox.ShowPassword(TxbNewPassword, PsbNewPassword);
+        }
+        #endregion
     }
 }

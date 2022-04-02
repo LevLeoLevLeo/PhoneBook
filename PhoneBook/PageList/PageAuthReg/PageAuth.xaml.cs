@@ -1,18 +1,7 @@
 ﻿using PhoneBook.Classes.Execution;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using WPFTextBoxHelp.Classes;
 
 namespace PhoneBook.PageList.PageAuthReg
@@ -47,14 +36,9 @@ namespace PhoneBook.PageList.PageAuthReg
         {
             WPFTextPassBox.PasswordBoxPlaceholderLostFocus(TxbPassword, PsbPassword);
         }
-
         #endregion
        
-        private void BtnAuthorize_Click(object sender, RoutedEventArgs e)
-        {
-            Execute.Authorization(TxbLogin, PsbPassword);
-        }
-
+        #region ShowPass
         private void BtnShowPass_Click(object sender, RoutedEventArgs e)
         {
             WPFTextPassBox.ShowPassword(TxbPassword, PsbPassword);
@@ -68,6 +52,12 @@ namespace PhoneBook.PageList.PageAuthReg
         private void PsbPassword_PasswordChanged(object sender, RoutedEventArgs e)
         {
             Execute.PsbPasswordChangeText(PsbPassword, BtnShowPass);
+        }
+        #endregion
+        
+        private void BtnAuthorize_Click(object sender, RoutedEventArgs e)
+        {
+            Execute.Authorization(TxbLogin, PsbPassword);
         }
     }
 }

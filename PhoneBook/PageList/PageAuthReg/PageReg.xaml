@@ -28,18 +28,19 @@
 
             <TextBox Name="TxbNewPassword" Text="Пароль" Margin="0 10 0 0"
                      GotKeyboardFocus="TxbNewPassword_GotKeyboardFocus"
-                     LostKeyboardFocus="TxbNewPassword_LostKeyboardFocus"
-                     TextChanged="TxbNewPassword_TextChanged"/>
+                     LostKeyboardFocus="TxbNewPassword_LostKeyboardFocus"/>
 
             <PasswordBox Name="PsbNewPassword" Margin="0 10 0 0"
                          GotKeyboardFocus="TxbNewPassword_GotKeyboardFocus"
                          LostKeyboardFocus="TxbNewPassword_LostKeyboardFocus"
                          PasswordChanged="PsbNewPassword_PasswordChanged"/>
 
-            <CheckBox Name="ChbShowPass" HorizontalAlignment="Right" Margin="0 -33 -135 0"
-                      HorizontalContentAlignment="Center" VerticalAlignment="Center"
-                      FontFamily="Roboto" Padding="3 -0.5 0 0" FontSize="14"
-                      Content="Показать пароль" Click="ChbShowPass_Click"/>
+            <Button Name="BtnShowPass" HorizontalAlignment="Right" Margin="0 -33 -135 0"
+                    HorizontalContentAlignment="Center" VerticalAlignment="Center"
+                    Content="Показать пароль"
+                    Click="BtnShowPass_Click" ClickMode="Press"
+                    PreviewMouseLeftButtonUp="BtnShowPass_PreviewMouseLeftButtonUp"
+                    Width="130px" Visibility="Collapsed"/>
 
             <TextBox Name="TxbRepeatNewPassword" Text="Повторите пароль" Margin="0 10 0 0"
                      GotKeyboardFocus="TxbRepeatNewPassword_GotKeyboardFocus"
