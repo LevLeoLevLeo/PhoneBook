@@ -20,6 +20,8 @@ namespace PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg
         }
         public void Click()
         {
+            ButtonReg.IsEnabled = false;
+            ButtonAuth.IsEnabled = true;
             ButtonAuth.IsDefault = false;
             ButtonReg.IsDefault = true;
             NavigationFrame.frame.Navigate(new PageReg());

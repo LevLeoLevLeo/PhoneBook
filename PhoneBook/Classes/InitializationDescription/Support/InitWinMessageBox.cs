@@ -49,10 +49,10 @@ namespace PhoneBook.Classes.InitializationDescription.Support
             switch (TypeMessage)
             {
                 case TypeMessage.Error:
-                    SystemSounds.Exclamation.Play();
+                    SystemSounds.Hand.Play();
                     break;
                 case TypeMessage.Information:
-                    SystemSounds.Hand.Play();
+                    SystemSounds.Beep.Play();
                     break;
                 case TypeMessage.Warning:
                     SystemSounds.Beep.Play();

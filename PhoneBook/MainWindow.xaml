@@ -30,7 +30,8 @@
         <!--#region Кнопки окна-->
 
         <Button Name="BtnAuthorize" Style="{StaticResource BtnAuthReg}" Content="Авторизация"
-            HorizontalAlignment="Left" Click="BtnAuthorize_Click" IsDefault="True"/>
+            HorizontalAlignment="Left" Click="BtnAuthorize_Click" IsDefault="True"
+                IsEnabled="False"/>
 
         <Button Name="BtnRegistration" Style="{StaticResource BtnAuthReg}" Content="Регистрация"
                 HorizontalAlignment="Right" Click="BtnRegistration_Click"/>

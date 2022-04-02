@@ -82,7 +82,7 @@ namespace PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg
                             }
                             break;
                         default:
-                            MessBox messBox2 = new MessBox("Произошла непредвиденная ошибка!", "Ошибка",
+                            MessBox messBox2 = new MessBox("Произошла непредвиденная ошибка. Попробуйте еще раз, или повторите попытку позже.", "Ошибка",
                                 TypeMessage.Information, ButtonEn.Ok);
                             messBox2.ShowDialog();
                             break;
