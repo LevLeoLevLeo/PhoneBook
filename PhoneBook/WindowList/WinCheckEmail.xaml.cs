@@ -24,9 +24,14 @@ namespace PhoneBook.WindowList
         public WinCheckEmail(TextBox textBoxEmail, TextBox textBoxLogin)
         {
             InitializeComponent();
+            TxbCheckCode.Text = "Код подтверждения";
             x = Execute.SendCodeToEmail(textBoxEmail, textBoxLogin);
+            TextBoxEmail = textBoxEmail;
+            TextBoxLogin = textBoxLogin;
         }
         private static string x;
+        private static TextBox TextBoxEmail;
+        private static TextBox TextBoxLogin;
         private void BtnThisClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -46,6 +51,16 @@ namespace PhoneBook.WindowList
         private void TxbCheckCode_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
         {
             WPFTextPassBox.TextBoxPlaceholderLostFocus(TxbCheckCode, "Код подтверждения");
+        }
+
+        private void BtnRepeatSendCode_Click(object sender, RoutedEventArgs e)
+        {
+            x = Execute.SendCodeToEmail(TextBoxEmail, TextBoxLogin);
+        }
+
+        private void TxbCheckCode_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Execute.VerifyEmailCode(TxbCheckCode, TxtNotCorrectCode, BtnRegistration);
         }
     }
 }

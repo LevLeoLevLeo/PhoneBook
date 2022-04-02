@@ -20,13 +20,30 @@
                    Style="{StaticResource TxtMain}" TextWrapping="Wrap" FontSize="20pt"
                    Margin="0 20 0 0"
                    Text="На Вашу почту был отправлен код для подтверждения регистрации. Пожалуйста, введите его ниже."/>
-
-        <TextBox Name="TxbCheckCode" HorizontalAlignment="Center" VerticalAlignment="Center"
-                 Text="Код подтверждения"
-                 GotKeyboardFocus="TxbCheckCode_GotKeyboardFocus" LostKeyboardFocus="TxbCheckCode_LostKeyboardFocus"/>
-        <Button Name="BtnRegistration" Content="Зарегестрироваться" HorizontalAlignment="Center"
-                VerticalAlignment="Center" Width="160px" Margin="0 74 0 0"
+        
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+        
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="130 0 0 0">
+       
+                <TextBox Name="TxbCheckCode" MaxLength="6"
+                 GotKeyboardFocus="TxbCheckCode_GotKeyboardFocus" LostKeyboardFocus="TxbCheckCode_LostKeyboardFocus"
+                         TextChanged="TxbCheckCode_TextChanged"/>
+            
+                <Button Name="BtnRepeatSendCode" Content="Отправить код" Margin="10 0 0 0" Width="130px"
+                    Click="BtnRepeatSendCode_Click"/>
+        
+            </StackPanel>
+           
+            <TextBlock Name="TxtNotCorrectCode" Style="{StaticResource TxtNotCorrect}" Text="Код состоит из 6-ти цифр"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" Width="160px" Margin="0 5 0 0"/>
+        
+            <Button Name="BtnRegistration" Content="Зарегестрироваться"
+                Width="160px" Margin="0 10 0 0"
                 Click="BtnRegistration_Click"/>
+        
+        </StackPanel>
+        
         <Button Name="BtnThisClose" Content="Отмена" HorizontalAlignment="Right"
                 VerticalAlignment="Bottom" Margin="0 0 10 10" Click="BtnThisClose_Click"/>
 

@@ -72,8 +72,8 @@ namespace PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg
                             DataBaseEnt.TelephoneBookEntities.SaveChanges();
                             MessBox messBox = new MessBox("Вы зарегестрированы!", "Регистрация", TypeMessage.Information,
                                 ButtonEn.Ok);
+                            NavigationFrame.frame.Navigate(new PageAuth());
                             messBox.ShowDialog();
-                            NavigationFrame.frame.Navigate(new PageReg());
                         }
 
                         catch (Exception ex)

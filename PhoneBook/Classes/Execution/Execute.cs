@@ -1,6 +1,7 @@
 ﻿using PhoneBook.Classes.Execution.Support;
 using PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg;
 using PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.AuthRegPage;
+using PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.CheckCodeEmail;
 using PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.RegPage;
 using System.Windows;
 using System.Windows.Controls;
@@ -150,6 +151,12 @@ namespace PhoneBook.Classes.Execution
             ExeTxbRegLoginTextChange exeTxbRegLoginTextChange = new ExeTxbRegLoginTextChange(ref text, ref textBox, ref textBlock,
                 ref button);
             exeTxbRegLoginTextChange.TextPassChange();
+        }
+        public static void VerifyEmailCode(TextBox textBox, TextBlock textBlock, Button button)
+        {
+            ExeTxbCheckVerifyEmailCode exeTxbCheckVerifyEmailCode = new ExeTxbCheckVerifyEmailCode(ref textBox, ref textBlock,
+                ref button);
+            exeTxbCheckVerifyEmailCode.TextPassChange();
         }
         #endregion
 
