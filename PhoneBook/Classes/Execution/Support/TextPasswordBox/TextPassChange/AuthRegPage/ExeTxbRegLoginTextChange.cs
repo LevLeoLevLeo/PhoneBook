@@ -8,13 +8,13 @@ using static PhoneBook.Classes.Support.DescriptionInterface;
 
 namespace PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.AuthRegPage
 {
-    public class ExeTxbLoginTextChange : ITextPassChange
+    public class ExeTxbRegLoginTextChange : ITextPassChange
     {
         private string Text { get; set; }
         private TextBox TextBox { get; set; }
         private TextBlock TextBlock { get; set; }
         private Button Button { get; set; }
-        public ExeTxbLoginTextChange (ref string text, ref TextBox textBox, ref TextBlock textBlock, ref Button button)
+        public ExeTxbRegLoginTextChange(ref string text, ref TextBox textBox, ref TextBlock textBlock, ref Button button)
         {
             Text = text;
             TextBox = textBox;
@@ -28,7 +28,7 @@ namespace PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.Aut
             {
                 var Login = DataBaseEnt.TelephoneBookEntities.User.FirstOrDefault(x => TextBox.Text == x.Login ||
                 TextBox.Text == x.Email);
-                if (Login == null)
+                if (Login != null)
                 {
                     TextBlock.Text = Text;
                     Button.IsEnabled = false;

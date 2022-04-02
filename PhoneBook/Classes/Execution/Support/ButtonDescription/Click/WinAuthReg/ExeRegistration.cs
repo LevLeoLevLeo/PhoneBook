@@ -1,6 +1,7 @@
 ﻿using PhoneBook.Classes.Support;
 using PhoneBook.DataBase;
 using PhoneBook.MessageDialog.MessBox;
+using PhoneBook.PageList.PageAuthReg;
 using PhoneBook.WindowList;
 using System;
 using System.Linq;
@@ -72,10 +73,7 @@ namespace PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg
                             MessBox messBox = new MessBox("Вы зарегестрированы!", "Регистрация", TypeMessage.Information,
                                 ButtonEn.Ok);
                             messBox.ShowDialog();
-                            TxbLogin.Text = "";
-                            TxbEmail.Text = "";
-                            PsbPassword.Password = "";
-                            PsbRepeatPassword.Password = "";
+                            NavigationFrame.frame.Navigate(new PageReg());
                         }
 
                         catch (Exception ex)

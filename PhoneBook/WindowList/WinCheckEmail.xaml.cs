@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WPFTextBoxHelp.Classes;
 
 namespace PhoneBook.WindowList
 {
@@ -29,11 +30,22 @@ namespace PhoneBook.WindowList
         private void BtnThisClose_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+            DialogResult = false;
         }
 
         private void BtnRegistration_Click(object sender, RoutedEventArgs e)
         {
             Execute.VerifyEmail(this, x, TxbCheckCode);
+        }
+
+        private void TxbCheckCode_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            WPFTextPassBox.TextBoxPlaceholderGotFocus(TxbCheckCode, "Код подтверждения");
+        }
+
+        private void TxbCheckCode_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            WPFTextPassBox.TextBoxPlaceholderLostFocus(TxbCheckCode, "Код подтверждения");
         }
     }
 }

@@ -22,7 +22,8 @@
                    Text="На Вашу почту был отправлен код для подтверждения регистрации. Пожалуйста, введите его ниже."/>
 
         <TextBox Name="TxbCheckCode" HorizontalAlignment="Center" VerticalAlignment="Center"
-                 Text="Код подтверждения"/>
+                 Text="Код подтверждения"
+                 GotKeyboardFocus="TxbCheckCode_GotKeyboardFocus" LostKeyboardFocus="TxbCheckCode_LostKeyboardFocus"/>
         <Button Name="BtnRegistration" Content="Зарегестрироваться" HorizontalAlignment="Center"
                 VerticalAlignment="Center" Width="160px" Margin="0 74 0 0"
                 Click="BtnRegistration_Click"/>

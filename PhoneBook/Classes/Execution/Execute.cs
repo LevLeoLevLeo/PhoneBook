@@ -58,10 +58,10 @@ namespace PhoneBook.Classes.Execution
         /// <param name="passwordBox1"></param>
         /// <param name="textBlock"></param>
         public static void RepeatPassword(TextBox textBox, PasswordBox passwordBox,
-            PasswordBox passwordBox1, TextBlock textBlock)
+            PasswordBox passwordBox1, TextBlock textBlock, Button button)
         {
             ExePsbRepeatPasswordChange exePsbRepeatPasswordChange = new ExePsbRepeatPasswordChange(ref textBox,
-                ref passwordBox, ref passwordBox1, ref textBlock);
+                ref passwordBox, ref passwordBox1, ref textBlock, ref button);
             exePsbRepeatPasswordChange.TextPassChange();
         }
 
@@ -114,10 +114,42 @@ namespace PhoneBook.Classes.Execution
             ExeVerifyEmail exeVerifyEmail = new ExeVerifyEmail(ref window, ref code, ref textBox);
             exeVerifyEmail.Click();
         }
-        public static void NotCorrectMessage(string text, TextBox textBox, TextBlock textBlock, Button button)
+        /// <summary>
+        /// Проверка логина на совпадение в БД.
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="textBox"></param>
+        /// <param name="textBlock"></param>
+        /// <param name="button"></param>
+        public static void AuthLoginNotCorrectMessage(string text, TextBox textBox, TextBlock textBlock, Button button)
         {
             ExeTxbLoginTextChange exeTxbLoginTextChange = new ExeTxbLoginTextChange(ref text, ref textBox, ref textBlock, ref button);
             exeTxbLoginTextChange.TextPassChange();
+        }
+        /// <summary>
+        /// Проверка новой почты на валдиность.
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="textBox"></param>
+        /// <param name="textBlock"></param>
+        /// <param name="button"></param>
+        public static void RegEmailNotCorrectMessage(string text, TextBox textBox, TextBlock textBlock, Button button)
+        {
+            ExeTxbEmailTextChange exeTxbEmailTextChange = new ExeTxbEmailTextChange(ref text, ref textBox, ref textBlock, ref button);
+            exeTxbEmailTextChange.TextPassChange();
+        }
+        /// <summary>
+        /// Проверка доступности логина при регистрации.
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="textBox"></param>
+        /// <param name="textBlock"></param>
+        /// <param name="button"></param>
+        public static void RegLoginNotCorrectMessage(string text, TextBox textBox, TextBlock textBlock, Button button)
+        {
+            ExeTxbRegLoginTextChange exeTxbRegLoginTextChange = new ExeTxbRegLoginTextChange(ref text, ref textBox, ref textBlock,
+                ref button);
+            exeTxbRegLoginTextChange.TextPassChange();
         }
         #endregion
 

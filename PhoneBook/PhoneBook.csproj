@@ -92,7 +92,9 @@
     <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinAuthReg\ExeVerifyEmail.cs" />
     <Compile Include="Classes\Execution\Support\SendEmail\ExeSendEmail.cs" />
     <Compile Include="Classes\Execution\Support\TextPasswordBox\TextPassChange\AuthRegPage\ExePsbPasswordChangeText.cs" />
+    <Compile Include="Classes\Execution\Support\TextPasswordBox\TextPassChange\AuthRegPage\ExeTxbEmailTextChange.cs" />
     <Compile Include="Classes\Execution\Support\TextPasswordBox\TextPassChange\AuthRegPage\ExeTxbLoginTextChange.cs" />
+    <Compile Include="Classes\Execution\Support\TextPasswordBox\TextPassChange\AuthRegPage\ExeTxbRegLoginTextChange.cs" />
     <Compile Include="Classes\Support\CurrentUser.cs" />
     <Compile Include="Classes\Support\DataBaseEnt.cs" />
     <Compile Include="Classes\Support\WindowTransfer.cs" />

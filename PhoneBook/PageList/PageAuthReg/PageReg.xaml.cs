@@ -16,6 +16,8 @@ namespace PhoneBook.PageList.PageAuthReg
         public PageReg()
         {
             InitializeComponent();
+            TxbNewLogin.Text = "Логин";
+            TxbNewEmail.Text = "Почта";
         }
 
         #region placeholder
@@ -69,22 +71,28 @@ namespace PhoneBook.PageList.PageAuthReg
         }
 
         #region Предупреждения
-        
         private void TxbNewEmail_TextChanged(object sender, TextChangedEventArgs e)
         {
-           
+            Execute.RegEmailNotCorrectMessage("Эта почта уже занята", TxbNewEmail,
+                TxtEmailNotCorrect, BtnRegistration);
         }
-
+        private void TxbNewLogin_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Execute.RegLoginNotCorrectMessage("Этот логин уже занят", TxbNewLogin, TxtLoginNotCorrect,
+                BtnRegistration);
+        }
         #endregion
 
         private void PsbRepeatNewPassword_PasswordChanged(object sender, RoutedEventArgs e)
         {
-            Execute.RepeatPassword(TxbRepeatNewPassword, PsbNewPassword, PsbRepeatNewPassword, TxtPasswordNotMatch);
+            Execute.RepeatPassword(TxbRepeatNewPassword, PsbNewPassword, PsbRepeatNewPassword, TxtPasswordNotMatch,
+                BtnRegistration);
         }
 
         #region ShowPass
         private void PsbNewPassword_PasswordChanged(object sender, RoutedEventArgs e)
         {
+            Execute.RepeatPassword(TxbRepeatNewPassword, PsbNewPassword, PsbRepeatNewPassword, TxtPasswordNotMatch, BtnRegistration);
             Execute.PsbPasswordChangeText(PsbNewPassword, BtnShowPass);
         }
         
@@ -98,5 +106,6 @@ namespace PhoneBook.PageList.PageAuthReg
             WPFTextPassBox.ShowPassword(TxbNewPassword, PsbNewPassword);
         }
         #endregion
+
     }
 }

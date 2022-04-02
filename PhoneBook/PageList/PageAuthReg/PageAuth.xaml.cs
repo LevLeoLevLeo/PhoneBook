@@ -63,7 +63,7 @@ namespace PhoneBook.PageList.PageAuthReg
 
         private void TxbLogin_TextChanged(object sender, TextChangedEventArgs e)
         {
-            Execute.NotCorrectMessage("Пользователя с таким логином/почтой нет", TxbLogin, TxtLoginEmailNotCorrect, BtnAuthorize);
+            Execute.AuthLoginNotCorrectMessage("Такого пользователя нет", TxbLogin, TxtLoginEmailNotCorrect, BtnAuthorize);
         }
     }
 }

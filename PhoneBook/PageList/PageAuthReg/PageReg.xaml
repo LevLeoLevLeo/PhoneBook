@@ -12,16 +12,18 @@
 
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
 
-            <TextBox Name="TxbNewLogin" Text="Логин"
+            <TextBox Name="TxbNewLogin"
                      GotKeyboardFocus="TxbLogin_GotKeyboardFocus"
-                     LostKeyboardFocus="TxbLogin_LostKeyboardFocus"/>
+                     LostKeyboardFocus="TxbLogin_LostKeyboardFocus"
+                     TextChanged="TxbNewLogin_TextChanged"/>
 
             <TextBlock Style="{StaticResource TxtNotCorrect}"
                        Name="TxtLoginNotCorrect" Text="Этот логин уже занят"/>
 
-            <TextBox Name="TxbNewEmail" Text="Почта" Margin="0 10 0 0"
+            <TextBox Name="TxbNewEmail" Margin="0 10 0 0"
                      GotKeyboardFocus="TxbNewEmail_GotKeyboardFocus"
-                     LostKeyboardFocus="TxbNewEmail_LostKeyboardFocus"/>
+                     LostKeyboardFocus="TxbNewEmail_LostKeyboardFocus"
+                     TextChanged="TxbNewEmail_TextChanged"/>
 
             <TextBlock Style="{StaticResource TxtNotCorrect}"
                        Name="TxtEmailNotCorrect" Text="Введена некорректная почта"/>

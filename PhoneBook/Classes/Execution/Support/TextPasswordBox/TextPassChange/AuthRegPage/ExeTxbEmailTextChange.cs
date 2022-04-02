@@ -8,13 +8,13 @@ using static PhoneBook.Classes.Support.DescriptionInterface;
 
 namespace PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.AuthRegPage
 {
-    public class ExeTxbLoginTextChange : ITextPassChange
+    public class ExeTxbEmailTextChange : ITextPassChange
     {
         private string Text { get; set; }
         private TextBox TextBox { get; set; }
         private TextBlock TextBlock { get; set; }
         private Button Button { get; set; }
-        public ExeTxbLoginTextChange (ref string text, ref TextBox textBox, ref TextBlock textBlock, ref Button button)
+        public ExeTxbEmailTextChange(ref string text, ref TextBox textBox, ref TextBlock textBlock, ref Button button)
         {
             Text = text;
             TextBox = textBox;
@@ -24,11 +24,10 @@ namespace PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.Aut
 
         public void TextPassChange()
         {
-            if (TextBox.Foreground != Brushes.Gray && !WPFTextPassBox.TextBoxIsNull(TextBox))
+            if (TextBox.Foreground != Brushes.Gray && WPFTextPassBox.CheckValidEmail(TextBox))
             {
-                var Login = DataBaseEnt.TelephoneBookEntities.User.FirstOrDefault(x => TextBox.Text == x.Login ||
-                TextBox.Text == x.Email);
-                if (Login == null)
+                var Login = DataBaseEnt.TelephoneBookEntities.User.FirstOrDefault(x => TextBox.Text == x.Email);
+                if (Login != null)
                 {
                     TextBlock.Text = Text;
                     Button.IsEnabled = false;
@@ -46,11 +45,22 @@ namespace PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.Aut
             }
             else
             {
-                Button.IsEnabled = true;
-                Button.Background = (Brush)new BrushConverter().ConvertFromString("#29435C");
-                TextBox.BorderBrush = (Brush)new BrushConverter().ConvertFromString("#29435C");
-                TextBlock.Visibility = Visibility.Collapsed;
-            }
+                if (TextBox.Foreground != Brushes.Gray && !WPFTextPassBox.TextBoxIsNull(TextBox))
+                {
+                    TextBlock.Text = "Введена некорректная почта";
+                    Button.IsEnabled = false;
+                    Button.Background = Brushes.Gray;
+                    TextBox.BorderBrush = (Brush)new BrushConverter().ConvertFromString("#E21616");
+                    TextBlock.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    Button.IsEnabled = true;
+                    Button.Background = (Brush)new BrushConverter().ConvertFromString("#29435C");
+                    TextBox.BorderBrush = (Brush)new BrushConverter().ConvertFromString("#29435C");
+                    TextBlock.Visibility = Visibility.Collapsed;
+                }
+            }  
         }
     }
 }
