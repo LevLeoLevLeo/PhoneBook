@@ -1,5 +1,6 @@
 ﻿using PhoneBook.Classes.Execution.Support;
 using PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg;
+using PhoneBook.Classes.Execution.Support.ComboBoxDescription.SelectionChange.PageMainUser;
 using PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.AuthRegPage;
 using PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.CheckCodeEmail;
 using PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.RegPage;
@@ -152,12 +153,28 @@ namespace PhoneBook.Classes.Execution
                 ref button);
             exeTxbRegLoginTextChange.TextPassChange();
         }
+        /// <summary>
+        /// Проверка на валидность кода подтверждения.
+        /// </summary>
+        /// <param name="textBox"></param>
+        /// <param name="textBlock"></param>
+        /// <param name="button"></param>
         public static void VerifyEmailCode(TextBox textBox, TextBlock textBlock, Button button)
         {
             ExeTxbCheckVerifyEmailCode exeTxbCheckVerifyEmailCode = new ExeTxbCheckVerifyEmailCode(ref textBox, ref textBlock,
                 ref button);
             exeTxbCheckVerifyEmailCode.TextPassChange();
         }
+        #endregion
+
+        #region Окно пользователя
+
+        public static void CmbChangePhoneList(ComboBox comboBox, DataGrid dataGrid)
+        {
+            ExeCmbPhoneListChange exeCmbPhoneListChang = new ExeCmbPhoneListChange(ref comboBox, ref dataGrid);
+            exeCmbPhoneListChang.Change();
+        }
+
         #endregion
 
     }

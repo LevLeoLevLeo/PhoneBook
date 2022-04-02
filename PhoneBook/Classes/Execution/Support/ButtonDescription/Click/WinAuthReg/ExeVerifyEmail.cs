@@ -8,6 +8,9 @@ using static PhoneBook.Classes.Support.DescriptionInterface;
 
 namespace PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg
 {
+    /// <summary>
+    /// Класс, отвечающий за проверку кода подтверждения.
+    /// </summary>
     internal class ExeVerifyEmail : IClick
     {
         private Window Window { get; set; }

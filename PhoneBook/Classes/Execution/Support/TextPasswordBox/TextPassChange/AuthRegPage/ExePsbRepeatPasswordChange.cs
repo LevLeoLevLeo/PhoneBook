@@ -6,6 +6,9 @@ using static PhoneBook.Classes.Support.DescriptionInterface;
 
 namespace PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.RegPage
 {
+    /// <summary>
+    /// Класс, проверяющий совпадабт ли пароли в поле "Пароль" и "Повторите пароль" на странице регистрации.
+    /// </summary>
     public class ExePsbRepeatPasswordChange : ITextPassChange
     {
         private TextBox TextBox { get; set; }

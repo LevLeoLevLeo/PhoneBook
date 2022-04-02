@@ -10,6 +10,9 @@ using static PhoneBook.Classes.Support.DescriptionInterface;
 
 namespace PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg
 {
+    /// <summary>
+    /// Класс, отвечающий за авторизацию.
+    /// </summary>
     public class ExeAuthorize : IClick
     { 
         private TextBox TextBoxLogin { get; set; }

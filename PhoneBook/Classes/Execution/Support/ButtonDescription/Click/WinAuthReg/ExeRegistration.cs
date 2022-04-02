@@ -12,6 +12,9 @@ using static PhoneBook.Classes.Support.DescriptionInterface;
 
 namespace PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg
 {
+    /// <summary>
+    /// Класс, отвечающий за регистрацию.
+    /// </summary>
     public class ExeRegistration : IClick
     {
 
@@ -35,7 +38,6 @@ namespace PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinAuthReg
 
         public void Click()
         {
-
             if (!WPFTextPassBox.TextBoxIsNull(TxbLogin) &&
                 !WPFTextPassBox.TextBoxIsNull(TxbEmail) &&
                 !WPFTextPassBox.PassBoxIsNull(PsbPassword) &&

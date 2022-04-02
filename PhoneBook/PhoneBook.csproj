@@ -96,6 +96,7 @@
     <Compile Include="Classes\Execution\Support\TextPasswordBox\TextPassChange\AuthRegPage\ExeTxbLoginTextChange.cs" />
     <Compile Include="Classes\Execution\Support\TextPasswordBox\TextPassChange\AuthRegPage\ExeTxbRegLoginTextChange.cs" />
     <Compile Include="Classes\Execution\Support\TextPasswordBox\TextPassChange\CheckCodeEmail\ExeTxbCheckVerifyEmailCode.cs" />
+    <Compile Include="Classes\InitializationDescription\Support\InitPageUser.cs" />
     <Compile Include="Classes\Support\CurrentUser.cs" />
     <Compile Include="Classes\Support\DataBaseEnt.cs" />
     <Compile Include="Classes\Support\WindowTransfer.cs" />

@@ -17,11 +17,15 @@
                        FontSize="24pt"/>
             
             <ComboBox Name="CmbPhoneList" FontFamily="Roboto" FontSize="16pt" Width="150px"
-                      Margin="10 0 0 0"/>
+                      Margin="10 0 0 0" Height="30"
+                      SelectionChanged="CmbPhoneList_SelectionChanged"/>
 
             <StackPanel Orientation="Vertical" Margin="100 0 0 0">
             
                 <TextBox Name="TxbSearchRecord" Width="250px" Text="Имя, номер, описание"
+                         GotKeyboardFocus="TxbSearchRecord_GotKeyboardFocus"
+                         LostKeyboardFocus="TxbSearchRecord_LostKeyboardFocus"
+                         TextChanged="TxbSearchRecord_TextChanged"
                      HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 
                 <StackPanel Orientation="Horizontal">
@@ -52,10 +56,10 @@
         
         <DataGrid Name="DtGrTelephoneInfo" AutoGenerateColumns="False" CanUserAddRows="False"
                   CanUserDeleteRows="False" IsReadOnly="True" SelectionMode="Single"
-                  HorizontalAlignment="Center" VerticalAlignment="Center"
+                  HorizontalAlignment="Left" VerticalAlignment="Center"
                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                   Foreground="#000" FontFamily="Roboto" FontSize="16pt"
-                  Margin="0 0 400 100">
+                  Margin="30 0 400 100">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Имя" Binding="{Binding Name}"/>
                 <DataGridTextColumn Header="Номер" Binding="{Binding Number}"/>

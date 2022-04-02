@@ -1,4 +1,7 @@
-﻿using System;
+﻿using PhoneBook.Classes.Execution;
+using PhoneBook.Classes.InitializationDescription;
+using PhoneBook.Classes.Support;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPFTextBoxHelp.Classes;
 
 namespace PhoneBook.PageList.PageUser
 {
@@ -23,6 +27,7 @@ namespace PhoneBook.PageList.PageUser
         public PageUserMain()
         {
             InitializeComponent();
+            Init.PageMainUser(CmbPhoneList);
         }
 
         private void BtnAddNumber_Click(object sender, RoutedEventArgs e)
@@ -33,6 +38,26 @@ namespace PhoneBook.PageList.PageUser
         private void BtnDeleteNumber_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void TxbSearchRecord_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            WPFTextPassBox.TextBoxPlaceholderGotFocus(TxbSearchRecord, "Имя, номер, описание");
+        }
+
+        private void TxbSearchRecord_LostKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
+        {
+            WPFTextPassBox.TextBoxPlaceholderLostFocus(TxbSearchRecord, "Имя, номер, описание");
+        }
+
+        private void TxbSearchRecord_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+        }
+
+        private void CmbPhoneList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Execute.CmbChangePhoneList(CmbPhoneList, DtGrTelephoneInfo);
         }
     }
 }

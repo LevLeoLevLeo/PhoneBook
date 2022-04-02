@@ -7,8 +7,14 @@ using System.Windows;
 
 namespace PhoneBook.Classes.Support
 {
+    /// <summary>
+    /// Содержит окно, которое необходимо передать.
+    /// </summary>
     public class WindowTransfer
     {
+        /// <summary>
+        /// Окно.
+        /// </summary>
         public static Window window;
     }
 }

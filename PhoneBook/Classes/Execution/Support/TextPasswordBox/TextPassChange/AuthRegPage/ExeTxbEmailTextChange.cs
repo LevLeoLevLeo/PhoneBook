@@ -8,6 +8,9 @@ using static PhoneBook.Classes.Support.DescriptionInterface;
 
 namespace PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.AuthRegPage
 {
+    /// <summary>
+    /// Класс, проверяющий почту на валидность на странице регистрации.
+    /// </summary>
     public class ExeTxbEmailTextChange : ITextPassChange
     {
         private string Text { get; set; }

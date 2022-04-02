@@ -12,12 +12,15 @@ using static PhoneBook.Classes.Support.DescriptionInterface;
 
 namespace PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.CheckCodeEmail
 {
+    /// <summary>
+    /// Класс, проверяющий валидность вводимого кода подтверждения.
+    /// </summary>
     public class ExeTxbCheckVerifyEmailCode : ITextPassChange
     {
         private TextBox TextBox { get; set; }
         private TextBlock TextBlock { get; set; }
         private Button Button { get; set; }
-        private readonly string CheckCode = @"{0-9]{6}";
+        private readonly string CheckCode = @"[0-9]{6}";
         public ExeTxbCheckVerifyEmailCode(ref TextBox textBox, ref TextBlock textBlock, ref Button button)
         {
             TextBox = textBox;
@@ -27,7 +30,7 @@ namespace PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.Che
         public void TextPassChange()
         {
             if (!Regex.IsMatch(TextBox.Text, CheckCode, RegexOptions.IgnoreCase) && TextBox.Foreground != Brushes.Gray
-                && !WPFTextPassBox.TextBoxIsNull(TextBox) && TextBox.Text.Length == 6)
+                && !WPFTextPassBox.TextBoxIsNull(TextBox))
             {
                 Button.IsEnabled = false;
                 Button.Background = Brushes.Gray;

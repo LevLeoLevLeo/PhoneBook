@@ -37,5 +37,14 @@ namespace PhoneBook.Classes.InitializationDescription
                 ref ButtonYes, ref ButtonCancel, ref image);
             initWinMessageBox.Initialization();
         }
+        /// <summary>
+        /// Инициализация главной страницы пользователя.
+        /// </summary>
+        /// <param name="comboBox"></param>
+        public static void PageMainUser(ComboBox comboBox)
+        {
+            InitPageUser initPageUser = new InitPageUser(ref comboBox);
+            initPageUser.Initialization();
+        }
     }
 }
