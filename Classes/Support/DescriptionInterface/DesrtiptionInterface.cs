@@ -43,7 +43,7 @@
         public interface IShowPass
         {
             /// <summary>
-            /// Реализует показ пароля.
+            /// Реализует показ/скрытие пароля.
             /// </summary>
             void ShowPass();
         }

@@ -10,7 +10,6 @@ namespace WPFTextBoxHelp.Classes.Support.Validation
     {
         private TextBox TextBox { get; set; }
         private PasswordBox PasswordBox { get; set; }
-
         private PasswordBox SecondPasswordBox { get; set; }
 
         public PsbRepeatPassword(ref TextBox textBox, ref PasswordBox passwordBox,

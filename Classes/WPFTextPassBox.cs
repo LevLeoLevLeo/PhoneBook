@@ -98,16 +98,27 @@ namespace WPFTextBoxHelp.Classes
         }
 
         /// <summary>
-        /// Показ/скрытие пароля по checkbox'у.
+        /// Показ пароля по удержанию.
         /// </summary>
         /// <param name="checkBoxPass"></param>
         /// <param name="textBoxPass"></param>
         /// <param name="passwordBox"></param>
-        public static void CheckBoxShowPassword(CheckBox checkBoxPass, TextBox textBoxPass, PasswordBox passwordBox)
+        public static void ShowPassword(TextBox textBoxPass, PasswordBox passwordBox)
         {
-            CheckBoxShowPass checkBoxShowPass = new CheckBoxShowPass(ref checkBoxPass,
-                ref textBoxPass, ref passwordBox);
+            ButtonPressShowPass checkBoxShowPass = new ButtonPressShowPass(
+            ref textBoxPass, ref passwordBox);
             checkBoxShowPass.ShowPass();
+        }
+        /// <summary>
+        /// Скрытие пароля.
+        /// </summary>
+        /// <param name="textBox"></param>
+        /// <param name="passwordBox"></param>
+        public static void HidePassword(TextBox textBox, PasswordBox passwordBox)
+        {
+            ButtonUpLeftButtonShowPass buttonUpLeftButtonShowPass = new ButtonUpLeftButtonShowPass(ref textBox,
+                ref passwordBox);
+            buttonUpLeftButtonShowPass.ShowPass();
         }
         /// <summary>
         /// Проверяет почту на валидность.
