@@ -35,38 +35,16 @@
 
                 </Button>
 
-                <Button Name="BtnDeletePhoneList" Style="{StaticResource BtnImage}"
-                    Click="BtnDeletePhoneList_Click"
-                    HorizontalAlignment="Center" VerticalAlignment="Center">
-
-                    <Image Source="/Asset/WinUser/Trash.png" Width="30" Height="30"/>
-
-                </Button>
-
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Margin="10 20 0 0"
                         HorizontalAlignment="Center" VerticalAlignment="Center">
 
-                    <TextBox Name="TxbSearchRecord" Width="250px" Text="Имя, номер, описание"
+                    <TextBox Name="TxbSearchRecord" Width="250px"
                          GotKeyboardFocus="TxbSearchRecord_GotKeyboardFocus"
                          LostKeyboardFocus="TxbSearchRecord_LostKeyboardFocus"
                          TextChanged="TxbSearchRecord_TextChanged"
                          HorizontalAlignment="Center" VerticalAlignment="Top"/>
-
-                    <StackPanel Orientation="Horizontal">
-
-                        <RadioButton GroupName="RdBtnSerchGroup" Width="95" HorizontalContentAlignment="Center"
-                                 VerticalContentAlignment="Center" FontFamily="Roboto" FontSize="8pt"
-                                 Content="Поиск в списке" Margin="12 0 0 0" Padding="0 2.6 0 0"
-                                     IsChecked="True"/>
-
-                        <RadioButton GroupName="RdBtnSerchGroup" Content="Поиск во всех списках" Width="128"
-                                 HorizontalContentAlignment="Center" Padding="0 2.6 0 0"
-                                     Margin="5 0 0 0"
-                                 VerticalContentAlignment="Center" FontFamily="Roboto" FontSize="8pt"/>
-
-                    </StackPanel>
 
                 </StackPanel>
 
@@ -83,22 +61,21 @@
 
             </StackPanel>
 
-
-            <DataGrid Name="DtGrTelephoneInfo" AutoGenerateColumns="False" CanUserAddRows="False"
+           <DataGrid Name="DtGrTelephoneInfo" AutoGenerateColumns="False" CanUserAddRows="False"
                   CanUserDeleteRows="False" IsReadOnly="True" SelectionMode="Single"
                   HorizontalAlignment="Left" VerticalAlignment="Center"
                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                   Foreground="#000" FontFamily="Roboto" FontSize="16pt"
-                  Margin="30 30 0 0">
+                  Margin="30 30 0 0"
+                      VerticalScrollBarVisibility="Visible">
 
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Имя" Binding="{Binding Name}"/>
-                    <DataGridTextColumn Header="Номер" Binding="{Binding Number}"/>
-                    <DataGridTextColumn Header="Описание" Binding="{Binding Description}"/>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Имя" Binding="{Binding Name}"/>
+                        <DataGridTextColumn Header="Номер" Binding="{Binding Number}"/>
+                        <DataGridTextColumn Header="Описание" Binding="{Binding Description}"/>
+                    </DataGrid.Columns>
 
-                </DataGrid.Columns>
-
-            </DataGrid>
+                </DataGrid>
         </StackPanel>
     </Grid>
 </Page>

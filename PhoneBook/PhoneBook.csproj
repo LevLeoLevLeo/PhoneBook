@@ -88,9 +88,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\Execution\Support\ButtonDescription\Click\PageUserMain\ExeBtnClickAddPhoneList.cs" />
+    <Compile Include="Classes\Execution\Support\ButtonDescription\Click\PageUserMain\ExeDeletePhoneList.cs" />
+    <Compile Include="Classes\Execution\Support\ButtonDescription\Click\PageUserMain\ExeDeletePhoneNumber.cs" />
     <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinAuthReg\ExeAuthorize.cs" />
     <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinAuthReg\ExeRegistration.cs" />
     <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinAuthReg\ExeVerifyEmail.cs" />
+    <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinDialog\ExeAddNewPhoneNumber.cs" />
     <Compile Include="Classes\Execution\Support\ButtonDescription\Click\WinDialog\ExeBtnClickCreateNewPhoneList.cs" />
     <Compile Include="Classes\Execution\Support\ComboBoxDescription\SelectionChange\PageMainUser\ExeCmbPhoneListChange.cs" />
     <Compile Include="Classes\Execution\Support\SendEmail\ExeSendEmail.cs" />
@@ -99,6 +102,7 @@
     <Compile Include="Classes\Execution\Support\TextPasswordBox\TextPassChange\AuthRegPage\ExeTxbLoginTextChange.cs" />
     <Compile Include="Classes\Execution\Support\TextPasswordBox\TextPassChange\AuthRegPage\ExeTxbRegLoginTextChange.cs" />
     <Compile Include="Classes\Execution\Support\TextPasswordBox\TextPassChange\CheckCodeEmail\ExeTxbCheckVerifyEmailCode.cs" />
+    <Compile Include="Classes\Execution\Support\TextPasswordBox\TextPassChange\PageMainUser\ExeSearchPhone.cs" />
     <Compile Include="Classes\InitializationDescription\Support\InitPageUser.cs" />
     <Compile Include="Classes\Support\CurrentUser.cs" />
     <Compile Include="Classes\Support\DataBaseEnt.cs" />

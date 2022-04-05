@@ -5,8 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PhoneBook.WindowList"
         mc:Ignorable="d"
-        Title="WinAddPhone" Height="450" Width="800">
+        Title="Добавление нового номера"  Height="250" Width="400" ResizeMode="NoResize">
     <Grid>
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                <GradientStop Color="#FFAFBD" Offset="0"/>
+                <GradientStop Color="#FFC3A0" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
         
+            <TextBox Name="TxbNewPhoneName" Foreground="Gray"
+                     GotKeyboardFocus="TxbNewPhoneName_GotKeyboardFocus"
+                 LostKeyboardFocus="TxbNewPhoneName_LostKeyboardFocus"/>
+
+            <TextBox Name="TxbNewPhoneNumber" Foreground="Gray" Margin="0 10 0 0"
+                     GotKeyboardFocus="TxbNewPhoneNumber_GotKeyboardFocus"
+                 LostKeyboardFocus="TxbNewPhoneNumber_LostKeyboardFocus"
+                     TextChanged="TxbNewPhoneNumber_TextChanged"/>
+
+            <TextBox Name="TxbNewPhoneDescription" Foreground="Gray" Margin="0 10 0 0"
+                     GotKeyboardFocus="TxbNewPhoneDescription_GotKeyboardFocus"
+                 LostKeyboardFocus="TxbNewPhoneDescription_LostKeyboardFocus"/>
+
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="0 0 10 10" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+
+            <Button Name="BtnAddNewPhoneNumber" Content="Создать" Margin="0 0 10 0" Click="BtnAddNewPhoneNumber_Click"/>
+            <Button Name="BtnCancel" Content="Отмена" Click="BtnCancel_Click"/>
+
+        </StackPanel>
     </Grid>
 </Window>

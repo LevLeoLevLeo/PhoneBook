@@ -5,6 +5,7 @@ using PhoneBook.Classes.Execution.Support.ButtonDescription.Click.WinDialog;
 using PhoneBook.Classes.Execution.Support.ComboBoxDescription.SelectionChange.PageMainUser;
 using PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.AuthRegPage;
 using PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.CheckCodeEmail;
+using PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.PageMainUser;
 using PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.RegPage;
 using System.Windows;
 using System.Windows.Controls;
@@ -187,6 +188,29 @@ namespace PhoneBook.Classes.Execution
             ExeBtnClickCreateNewPhoneList exeBtnClickCreateNewPhoneList = new ExeBtnClickCreateNewPhoneList(
                 ref textBox, ref window);
             exeBtnClickCreateNewPhoneList.Click();
+        }
+        public static void DeletePhoneList(ComboBox comboBox)
+        {
+            ExeDeletePhoneList deletePhoneList = new ExeDeletePhoneList(ref comboBox);
+            deletePhoneList.Click();
+        }
+        public static void AddNewPhoneNumber(TextBox textBoxName, TextBox textBoxNumber,
+            TextBox textBoxDescription, ComboBox comboBox)
+        {
+            ExeAddNewPhoneNumber exeAddNewPhoneNumber = new ExeAddNewPhoneNumber(ref textBoxName,
+                ref textBoxNumber, ref textBoxDescription, ref comboBox);
+            exeAddNewPhoneNumber.Click();
+        }
+        public static void DeletePhoneNumber(DataGrid dataGrid, ComboBox comboBox)
+        {
+            ExeDeletePhoneNumber exeDeletePhoneNumber = new ExeDeletePhoneNumber(ref dataGrid, ref comboBox);
+            exeDeletePhoneNumber.Click();
+        }
+        public static void SearchPhoneNumber(TextBox TextBox, ComboBox ComboBox, DataGrid DataGrid)
+        {
+            ExeSearchPhone exeSearchPhone = new ExeSearchPhone(ref TextBox,
+                ref ComboBox, ref DataGrid);
+            exeSearchPhone.TextPassChange();
         }
         #endregion
 

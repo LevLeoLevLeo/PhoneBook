@@ -29,7 +29,8 @@ namespace PhoneBook.Classes.Execution.Support.TextPasswordBox.TextPassChange.Che
         }
         public void TextPassChange()
         {
-            if (!Regex.IsMatch(TextBox.Text, CheckCode, RegexOptions.IgnoreCase) && TextBox.Foreground != Brushes.Gray
+            if (!Regex.IsMatch(TextBox.Text, CheckCode, RegexOptions.IgnoreCase) &&
+                TextBox.Foreground != Brushes.Gray
                 && !WPFTextPassBox.TextBoxIsNull(TextBox))
             {
                 Button.IsEnabled = false;

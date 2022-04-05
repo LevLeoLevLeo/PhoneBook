@@ -14,9 +14,11 @@ namespace PhoneBook.Classes.InitializationDescription.Support
     /// </summary>
     public class InitPageUser : IInit
     {
+        private DataGrid DataGrid { get; set; }
         private ComboBox ComboBox { get; set; }
-        public InitPageUser(ref ComboBox comboBox)
+        public InitPageUser(ref DataGrid dataGrid, ref ComboBox comboBox)
         {
+            DataGrid = dataGrid;
             ComboBox = comboBox;
         }
         public void Initialization()
@@ -26,6 +28,9 @@ namespace PhoneBook.Classes.InitializationDescription.Support
             ComboBox.ItemsSource = DataBaseEnt.TelephoneBookEntities.PhoneList.Where(
                 x => x.IdUser == CurrentUser.currentUser.Id).ToList();
             ComboBox.SelectedIndex = 0;
+            int y = Convert.ToInt32(ComboBox.SelectedValue);
+            DataGrid.ItemsSource = DataBaseEnt.TelephoneBookEntities.PhoneNumber.Where(x =>
+            x.IdPhoneList == y).ToList();
         }
     }
 }

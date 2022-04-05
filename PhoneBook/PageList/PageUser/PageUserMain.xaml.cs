@@ -1,6 +1,7 @@
 ﻿using PhoneBook.Classes.Execution;
 using PhoneBook.Classes.InitializationDescription;
 using PhoneBook.Classes.Support;
+using PhoneBook.WindowList;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,17 +28,23 @@ namespace PhoneBook.PageList.PageUser
         public PageUserMain()
         {
             InitializeComponent();
-            Init.PageMainUser(CmbPhoneList);
+            Init.PageMainUser(DtGrTelephoneInfo, CmbPhoneList);
+            TxbSearchRecord.Text = "Имя, номер, описание";
         }
 
         private void BtnAddNumber_Click(object sender, RoutedEventArgs e)
         {
-
+            WinAddPhone winAddPhone = new WinAddPhone(CmbPhoneList);
+            if (winAddPhone.ShowDialog() == true)
+                winAddPhone.Close();
+            int y = Convert.ToInt32(CmbPhoneList.SelectedValue);
+                DtGrTelephoneInfo.ItemsSource = DataBaseEnt.TelephoneBookEntities.PhoneNumber.Where(x =>
+            x.IdPhoneList == y).ToList();
         }
 
         private void BtnDeleteNumber_Click(object sender, RoutedEventArgs e)
         {
-
+            Execute.DeletePhoneNumber(DtGrTelephoneInfo, CmbPhoneList);
         }
 
         private void TxbSearchRecord_GotKeyboardFocus(object sender, KeyboardFocusChangedEventArgs e)
@@ -52,7 +59,7 @@ namespace PhoneBook.PageList.PageUser
 
         private void TxbSearchRecord_TextChanged(object sender, TextChangedEventArgs e)
         {
-            
+            Execute.SearchPhoneNumber(TxbSearchRecord, CmbPhoneList, DtGrTelephoneInfo);
         }
 
         private void CmbPhoneList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -67,7 +74,7 @@ namespace PhoneBook.PageList.PageUser
 
         private void BtnDeletePhoneList_Click(object sender, RoutedEventArgs e)
         {
-
+            Execute.DeletePhoneList(CmbPhoneList);
         }
     }
 }

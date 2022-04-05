@@ -41,9 +41,9 @@ namespace PhoneBook.Classes.InitializationDescription
         /// Инициализация главной страницы пользователя.
         /// </summary>
         /// <param name="comboBox"></param>
-        public static void PageMainUser(ComboBox comboBox)
+        public static void PageMainUser(DataGrid dataGrid, ComboBox comboBox)
         {
-            InitPageUser initPageUser = new InitPageUser(ref comboBox);
+            InitPageUser initPageUser = new InitPageUser(ref dataGrid, ref comboBox);
             initPageUser.Initialization();
         }
     }
